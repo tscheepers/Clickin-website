@@ -1,0 +1,5 @@
+name: Clickin.co
+gems: [jekyll-sass]
+markdown: redcarpet
+highlighter: true
+exclude: [Vagrantfile, README.md, LICENSE]
