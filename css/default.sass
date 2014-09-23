@@ -3,6 +3,26 @@
 body
     background-color: $bg-color
     font-family: $open-sans
+    font-weight: 400
+
+// ------ Headings classes ------
+
+h1
+    display: none
+
+h2
+    font-family: $open-sans
+    font-weight: 300
+    font-size: 50px
+    line-height: 60px
+    color: $gray-color
+    margin: 0
+    padding: 0
+
+    span
+        color: $orange-color
+        font-family: $bree-serif
+
 
 // ------ Standard classes ------
 .wrapper
@@ -11,7 +31,7 @@ body
     float: left
     position: relative
     padding: 130px 0
-    z-index: 1
+    overflow: visible
 
     &.wrapper-white
         border-top: 1px solid $gray-line-color
@@ -22,6 +42,13 @@ body
 
     &.wrapper-gray
         background-color: $gray-lightest-color
+
+    &.small-padding-top
+        padding-top: 80px !important
+        
+.align-center
+    text-align: center
+    margin: 0 auto
 
 a:hover,
 btn:hover
@@ -43,6 +70,46 @@ btn:hover
     background-repeat: no-repeat
     height: 100px
     width: 100px
+
+.icon-down
+    width: 30px
+    height: 30px
+    display: block
+    background-image: $icon-down
+    background-size: 100%
+    background-position: center
+    background-repeat: no-repeat
+
+span.nav-phrase
+    height: 30px
+    margin: 40px 0 10px 0
+    padding: 0
+    line-height: 30px
+    font-size: 22px
+    font-family: $open-sans
+    font-weight: 300
+    color: $gray-color
+    display: block
+    position: relative
+
+    &:before,
+    &:after
+        content: ''
+        width: 1px
+        background-color: $black-color
+        position: absolute
+        left: calc(50% - 1px)
+        z-index: 999
+
+    &:before
+        height: 30px
+        top: -40px
+
+    &:after
+        height: 245px
+        top: 80px
+        
+
 
 // ------ Menu classes ------
 
@@ -69,13 +136,14 @@ nav.main-nav
             display: inline-block
             float: left
             height: 30px
+            font-weight: 300
 
             &.current
                 border-bottom: 2px solid $orange-color
                 
                 a
                     color: $black-color
-                    font-weight: 700
+                    font-weight: 600
                     
                     &:hover
                         color: $gray-light-color
@@ -89,6 +157,7 @@ nav.main-nav
 
                 &:hover
                     color: $orange-color
+
 
         
     
