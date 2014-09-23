@@ -286,7 +286,7 @@ header .header-payoff span:last-child {
 /* line 75, /Users/Olav/Development/Clickin.co/css/home.sass */
 .mockup-phone-legend {
   position: absolute;
-  left: 0;
+  left: 15px;
   bottom: 0;
 }
 /* line 80, /Users/Olav/Development/Clickin.co/css/home.sass */
