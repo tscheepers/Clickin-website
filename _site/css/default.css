@@ -16,8 +16,8 @@ h2 {
   font-weight: 300;
   font-size: 50px;
   line-height: 60px;
-  color: #3f3c3a;
-  margin: 0;
+  color: #181818;
+  margin: 30px 0 10px 0;
   padding: 0;
 }
 /* line 22, /Users/Olav/Development/Clickin.co/css/default.sass */
@@ -26,7 +26,27 @@ h2 span {
   font-family: "Bree Serif", sans-serif;
 }
 
-/* line 28, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 26, /Users/Olav/Development/Clickin.co/css/default.sass */
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: #181818;
+  margin: 0;
+  padding: 0;
+}
+/* line 35, /Users/Olav/Development/Clickin.co/css/default.sass */
+p span {
+  color: #e46b39;
+  font-family: "Bree Serif", sans-serif;
+}
+/* line 39, /Users/Olav/Development/Clickin.co/css/default.sass */
+p.leading {
+  font-size: 22px;
+}
+
+/* line 45, /Users/Olav/Development/Clickin.co/css/default.sass */
 .wrapper {
   width: 100%;
   display: inline-block;
@@ -35,7 +55,7 @@ h2 span {
   padding: 130px 0;
   overflow: visible;
 }
-/* line 36, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 53, /Users/Olav/Development/Clickin.co/css/default.sass */
 .wrapper.wrapper-white {
   border-top: 1px solid #e5e0e0;
   margin-top: 1px;
@@ -43,22 +63,22 @@ h2 span {
   margin-bottom: 1px;
   background-color: #f8f8f8;
 }
-/* line 43, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 60, /Users/Olav/Development/Clickin.co/css/default.sass */
 .wrapper.wrapper-gray {
   background-color: #eeece6;
 }
-/* line 46, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 63, /Users/Olav/Development/Clickin.co/css/default.sass */
 .wrapper.small-padding-top {
   padding-top: 80px !important;
 }
 
-/* line 49, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 66, /Users/Olav/Development/Clickin.co/css/default.sass */
 .align-center {
   text-align: center;
   margin: 0 auto;
 }
 
-/* line 53, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 70, /Users/Olav/Development/Clickin.co/css/default.sass */
 a:hover,
 btn:hover {
   transition: 0.25s;
@@ -67,7 +87,7 @@ btn:hover {
   -webkit-transition: 0.25s;
 }
 
-/* line 62, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 79, /Users/Olav/Development/Clickin.co/css/default.sass */
 .logo {
   display: inline-block;
   position: absolute;
@@ -81,7 +101,7 @@ btn:hover {
   width: 100px;
 }
 
-/* line 74, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 91, /Users/Olav/Development/Clickin.co/css/default.sass */
 .icon-down {
   width: 30px;
   height: 30px;
@@ -92,10 +112,10 @@ btn:hover {
   background-repeat: no-repeat;
 }
 
-/* line 83, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 100, /Users/Olav/Development/Clickin.co/css/default.sass */
 span.nav-phrase {
   height: 30px;
-  margin: 40px 0 10px 0;
+  margin: 50px 0 10px 0;
   padding: 0;
   line-height: 30px;
   font-size: 22px;
@@ -105,7 +125,7 @@ span.nav-phrase {
   display: block;
   position: relative;
 }
-/* line 95, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 112, /Users/Olav/Development/Clickin.co/css/default.sass */
 span.nav-phrase:before, span.nav-phrase:after {
   content: "";
   width: 1px;
@@ -114,18 +134,18 @@ span.nav-phrase:before, span.nav-phrase:after {
   left: calc(50% - 1px);
   z-index: 999;
 }
-/* line 104, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 121, /Users/Olav/Development/Clickin.co/css/default.sass */
 span.nav-phrase:before {
   height: 30px;
   top: -40px;
 }
-/* line 108, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 125, /Users/Olav/Development/Clickin.co/css/default.sass */
 span.nav-phrase:after {
-  height: 245px;
+  height: 252px;
   top: 80px;
 }
 
-/* line 116, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 133, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav {
   display: inline-block;
   height: 160px;
@@ -133,7 +153,7 @@ nav.main-nav {
   margin-bottom: 1px;
   padding: 0 !important;
 }
-/* line 123, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 140, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav ul {
   position: absolute;
   width: auto;
@@ -143,7 +163,7 @@ nav.main-nav ul {
   padding: 0;
   margin: 0;
 }
-/* line 132, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 149, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav ul li.menu-item {
   list-style-type: none;
   padding: 0 0 10px 0;
@@ -153,27 +173,27 @@ nav.main-nav ul li.menu-item {
   height: 30px;
   font-weight: 300;
 }
-/* line 141, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 158, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav ul li.menu-item.current {
   border-bottom: 2px solid #e46b39;
 }
-/* line 144, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 161, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav ul li.menu-item.current a {
   color: #181818;
   font-weight: 600;
 }
-/* line 148, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 165, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav ul li.menu-item.current a:hover {
   color: #747170;
 }
-/* line 152, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 169, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav ul li.menu-item a {
   line-height: 20px;
   font-size: 17px;
   color: #747170;
   text-decoration: none;
 }
-/* line 158, /Users/Olav/Development/Clickin.co/css/default.sass */
+/* line 175, /Users/Olav/Development/Clickin.co/css/default.sass */
 nav.main-nav ul li.menu-item a:hover {
   color: #e46b39;
 }
