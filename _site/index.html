@@ -10,13 +10,11 @@
 
 	-->
 	<head>
-	{% if page.title contains 'Clickin' %}
-		<title>{{ page.title }}</title>
-	{% else %}
-		<title>{{ site.name }} - {{ page.title }}</title>
-	{% endif %}
-		<meta name="description" content="{{ page.description }}" />
-		<meta name="keywords" content="{{ page.keywords }}" />
+	
+		<title>Clickin.co - home</title>
+	
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 		<meta name="author" content="Olav Peuscher" />
@@ -48,23 +46,28 @@
 
 		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="/css/lib/bootstrap.min.css" />
-	{% for css_name in page.css %}
-	    <link rel="stylesheet" type="text/css" href="/css/{{ css_name }}?v=1">
-	{% endfor %}
+	
+	    <link rel="stylesheet" type="text/css" href="/css/home.css?v=1">
+	
 	</head>
 	<body>
 		<!--HEADER-->
 			<nav class="wrapper main-nav">
 				<div class="logo"></div>
 				<ul>
-					<li class="menu-item current{% if current[1] == '' %}current{% endif %}"><a href="/">Say hello</a></li>
-					<li class="menu-item {% if current[1] == '/#about' %}current{% endif %}"><a href="/">About</a></li>
-					<li class="menu-item {% if current[1] == '/#early-access' %}current{% endif %}"><a href="/">Early access</a></li>
-					<li class="menu-item {% if current[1] == '/#press' %}current{% endif %}"><a href="/">Press</a></li>
+					<li class="menu-item current"><a href="/">Say hello</a></li>
+					<li class="menu-item "><a href="/">About</a></li>
+					<li class="menu-item "><a href="/">Early access</a></li>
+					<li class="menu-item "><a href="/">Press</a></li>
 				</ul>
 			</nav>
 			
-			{{ content }}
+			<header class="wrapper">
+	<div class="header-phone"></div>
+</header>
+<section class= "wrapper wrapper-white"></section>
+<section class= "wrapper wrapper-gray"></section>
+<section class= "wrapper wrapper-white"></section>
 
 		<!--FOOTER -->
 		<footer></footer>
