@@ -1,1 +1,46 @@
 @import default
+
+// ------ Header classes ------
+
+header
+    height: 460px
+    width: 100%
+    padding: 0 !important
+    background-image: $header-image
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    overflow: visible
+    z-index: 99 !important
+
+    .header-phone
+        width: 230px
+        height: 480px
+        display: inline-block
+        position: absolute
+        top: 60px
+        left: calc(50% - 115px)
+        background-image: $header-phone-image
+        background-size: 100%
+        background-repeat: no-repeat
+
+    .header-payoff
+        width: 360px
+        height: auto
+        display: inline-block
+        position: absolute
+        top: 144px
+        left: calc(50% - 535px)
+
+        span
+            width: 100%
+            color: white
+            display: inline-block
+            text-align: right
+            font-family: $bree-serif
+            font-size: 70px
+            line-height: 80px
+            height: 80px
+
+            &:last-child
+                color: $black-color

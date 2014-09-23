@@ -11,6 +11,7 @@ body
     float: left
     position: relative
     padding: 130px 0
+    z-index: 1
 
     &.wrapper-white
         border-top: 1px solid $gray-line-color
@@ -89,25 +90,5 @@ nav.main-nav
                 &:hover
                     color: $orange-color
 
-// ------ Header classes ------
-
-header
-    height: 460px
-    width: 100%
-    padding: 0 !important
-    background-image: $header-image
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
-
-    .header-phone
-        width: 230px
-        height: 480px
-        display: inline-block
-        position: absolute
-        top: 65px
-        left: calc(50% - 115px)
-        background-image: $header-phone-image
-        background-size: 100%
-        background-repeat: no-repeat
+        
     
