@@ -38,12 +38,14 @@ header
             display: inline-block
             text-align: right
             font-family: $bree-serif
-            font-size: 70px
+            font-size: 68px
             line-height: 80px
             height: 80px
 
             &:last-child
                 color: $black-color
+
+// ------ Section one classes ------
 
 .content-phone-container
     margin-top: 60px
@@ -62,8 +64,55 @@ header
         margin: 0 auto
         background-color: $gray-line-color
 
+// ------ Section two classes ------
+
 .mockup-phone
     margin-top: 30px
-    
+
     img
         width: 100%
+
+.mockup-phone-legend
+    position: absolute
+    left: 0
+    bottom: 0
+
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+
+        li
+            text-align: left
+            padding: 0
+            height: 30px
+            line-height: 30px
+            margin-top: 30px
+            font-size: 16px
+            font-weight: 300
+
+            &:first-child
+                margin-top: 0
+
+            span
+                color: $orange-color
+                font-family: $bree-serif
+
+                &.bullet
+                    width: 30px
+                    height: 30px
+                    line-height: 33px
+                    text-align: center
+                    border-radius: 15px
+                    -ms-border-radius: 15px
+                    -moz-border-radius: 15px
+                    -webkit-border-radius: 15px
+                    display: inline-block
+                    float: left
+                    margin-right: 15px
+                    background-color: $gray-light-color
+                    color: white
+
+
+// ------ Section three classes ------
+

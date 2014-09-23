@@ -58,11 +58,13 @@
 		<!--HEADER-->
 			<nav class="wrapper main-nav">
 				<div class="logo"></div>
+
+				{% assign current = page.url | downcase | split: '/' %}
 				<ul>
-					<li class="menu-item current{% if current[1] == '' %}current{% endif %}"><a href="/">Say hello</a></li>
-					<li class="menu-item {% if current[1] == '/#about' %}current{% endif %}"><a href="/">About</a></li>
-					<li class="menu-item {% if current[1] == '/#early-access' %}current{% endif %}"><a href="/">Early access</a></li>
-					<li class="menu-item {% if current[1] == '/#press' %}current{% endif %}"><a href="/">Press</a></li>
+					<li class="menu-item {% if current[0] == '' %}current{% endif %}"><a href="/">Say hello</a></li>
+					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">About</a></li>
+					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Early access</a></li>
+					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li>
 				</ul>
 			</nav>
 			
