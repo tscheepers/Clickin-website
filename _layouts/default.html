@@ -39,18 +39,34 @@
 		<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
 
 		<!--[if lt IE 9]>
-		<script type="text/javascript" src="/js/html5shiv.js"></script>	
+		<script type="text/javascript" src="/js/lib/html5shiv.js"></script>	
 		<link rel="stylesheet" type="text/css" href="/css/ie.not.passed.css" />	
 		<![endif]-->
 
+		<!--Webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,400' rel='stylesheet' type='text/css'>
+
+		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="/css/lib/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/fonts.css" />
 	{% for css_name in page.css %}
 	    <link rel="stylesheet" type="text/css" href="/css/{{ css_name }}?v=1">
 	{% endfor %}
 	</head>
 	<body>
+		<h1>Clickin</h1>
 		<!--HEADER-->
-			<header></header>
+			<nav class="wrapper main-nav">
+				<div class="logo"></div>
+
+				{% assign current = page.url | downcase | split: '/' %}
+				<ul>
+					<li class="menu-item {% if current[0] == '' %}current{% endif %}"><a href="/">Say hello</a></li>
+					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">About</a></li>
+					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Early access</a></li>
+					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li>
+				</ul>
+			</nav>
 			
 			{{ content }}
 
