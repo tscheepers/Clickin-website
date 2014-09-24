@@ -10,9 +10,9 @@ after_success:
 
 deploy:
 - provider: s3
-  access_key_id: AKIAJNBFIDXR32EIRS4A
+  access_key_id: AKIAIY6LCZTMFGA3LQJA
   secret_access_key:
-    secure: iUo11NJmNvXL7wTPM0S67tgRjr+jhEiPGuYSCt+xDoKdAv+0oQFDGGvqHNy5mEohxGuZ4FMPHQsTlIJntV3Af+iawj6gxRRzhJTN4s13fK6WToVElTzXYflBazNFXldfKEYTWStNXBLdS/zfbsyWDL3AoFACliZj/JmG+rUVkWk=
+    secure: "jAYpwEtPjHDAmwj3L4JZA2JlF6xBhRsNI2Z3Jv9ga1gNhEw5qPXZuNe1Dz4mGWRAy2tWo9IGRdndpvKuOMhS+bLg9a7vfXTMc4Rp9XodeTfxNrvOxJAkbzN2M9eny3MEw9V0Uhpt3pWkWCgX8UBzL+YALWLz27NHqLaDnuqhYAw="
   endpoint: s3-website-eu-west-1.amazonaws.com
   bucket: dev.label305.com
   region: eu-west-1
