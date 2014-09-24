@@ -1,0 +1,24 @@
+language: ruby
+
+before_install:
+- travis_retry gem install jekyll jekyll-sass
+
+script: jekyll build
+
+after_success:
+- ls -la
+
+deploy:
+- provider: s3
+  access_key_id: AKIAJNBFIDXR32EIRS4A
+  secret_access_key:
+    secure: iUo11NJmNvXL7wTPM0S67tgRjr+jhEiPGuYSCt+xDoKdAv+0oQFDGGvqHNy5mEohxGuZ4FMPHQsTlIJntV3Af+iawj6gxRRzhJTN4s13fK6WToVElTzXYflBazNFXldfKEYTWStNXBLdS/zfbsyWDL3AoFACliZj/JmG+rUVkWk=
+  endpoint: s3-website-eu-west-1.amazonaws.com
+  bucket: dev.label305.com
+  region: eu-west-1
+  skip_cleanup: true
+  local-dir: _site
+  acl: !ruby/string:HighLine::String public_read
+  on:
+    repo: Label305/Clickin.co
+    branch: dev
