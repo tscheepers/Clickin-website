@@ -14,7 +14,7 @@ deploy:
   secret_access_key:
     secure: "jAYpwEtPjHDAmwj3L4JZA2JlF6xBhRsNI2Z3Jv9ga1gNhEw5qPXZuNe1Dz4mGWRAy2tWo9IGRdndpvKuOMhS+bLg9a7vfXTMc4Rp9XodeTfxNrvOxJAkbzN2M9eny3MEw9V0Uhpt3pWkWCgX8UBzL+YALWLz27NHqLaDnuqhYAw="
   endpoint: s3-website-eu-west-1.amazonaws.com
-  bucket: dev.label305.com
+  bucket: clickin.dev305.nl
   region: eu-west-1
   skip_cleanup: true
   local-dir: _site
