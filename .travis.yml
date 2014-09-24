@@ -12,6 +12,7 @@ deploy:
   endpoint: s3-website-eu-west-1.amazonaws.com
   bucket: clickin.dev305.nl
   region: eu-west-1
+  skip_cleanup: true
   local-dir: _site
   acl: !ruby/string:HighLine::String public_read
   on:
