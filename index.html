@@ -89,7 +89,7 @@ css: home.css
 <section class= "wrapper wrapper-gray">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset-1">
+			<div class="col-xs-12 col-md-10 col-md-offset-1 conversation-title">
 				<h2>
 					Let’s get <span>together,</span> have fun. 
 					We believe media becomes <span>truly social</span> 
@@ -99,9 +99,79 @@ css: home.css
 					So, <span>talk all together</span> about activity details together and adapt it to everyone's needs.
 				</p>
 			</div>
+			<div class="col-xs-12 align-center phone-blur-container">
+				<div class="conversation-timeline-content">
+					<div class="conversation-item">
+						<span class="conversation-message">Alright! maybe we can play double..?</span>
+						<span class="conversation-detail">17:56</span>
+						<div class="conversation-image first"></div>
+						<div class="conversation-bullet small"></div>
+
+					</div>
+					<div class="conversation-item">
+						<span class="conversation-name">Britta</span>
+						<span class="conversation-message">Good idea. But where should we play then? :)</span>
+						<span class="conversation-detail">18:01</span>
+						<div class="conversation-image second"></div>
+					</div>
+					<div class="conversation-item">
+						<span class="conversation-event">Location changed</span>
+						<span class="conversation-message">CityView Racquet Club</span>
+						<span class="conversation-detail">NY 11101 New york</span>
+						<div class="conversation-image third"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="conversation-timeline"></div>
+				
+			<div class="col-xs-12">
+				<span class="nav-phrase align-center">Lets get together, have fun.</span>
+				<div class="icon-down align-center"></div>
+			</div>
 		</div>
 	</div>
-
-
-
 </section>
+<section class= "wrapper wrapper-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 relative">
+				<h2>Come on! Get <span>early access</span>.</h2>
+				<p class="leading align-center">
+					Subscribe now.
+				</p>
+			</div>
+			<div class="col-xs-12 relative form-container align-center">
+				
+
+				<!--TODO: Bitchin checkbox, default value -->
+
+				<form id="form" method="post">
+				    <div class="input">
+				    	<input type="text" name="name" id="name" value="name"/>
+				    </div>
+
+				    <div class="input">
+				    	<input type="text" name="email" id="email" value="email"/>
+				    </div>
+
+				    <div class="input checkbox">
+				    	<input type="checkbox"></input>
+				    	<span>I agree with the terms</span>
+				    </div>
+
+				     <div class="input submit">
+				     	<input class="submit" type="submit" value="Get early access" />
+				     </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="wrapper align-center">
+	<div class="footer-content-wrapper">
+		<div class="email"><p><span>Sales:</span> sales@clickin.com</p></div>
+		<div class="footer-logo"></div>
+		<div class="email"><p><span>Press:</span> press@clickin.com</p></div>
+	</div>
+</footer>
