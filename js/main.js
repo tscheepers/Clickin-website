@@ -9,30 +9,33 @@ $(window).load(mobilecheck);
         return check;
     }
 
-$(document).ready(function(){
-    
-    // Script for the animated header
-    var $head = $( '#ha-nav' );
-    
-    $( '.ha-waypoint' ).each( function(i) {
-        var $el = $( this ),
-            animClassDown = $el.data( 'animateDown' ),
-            animClassUp = $el.data( 'animateUp' );
-
-        $el.waypoint( function( direction ) {
-            if( direction === 'down' && animClassDown ) {
-                $head.attr('class', 'ha-header ' + animClassDown);
-            }
-            else if( direction === 'up' && animClassUp ){
-                $head.attr('class', 'ha-header ' + animClassUp);
-            }
-        }, { offset: '100%' } );
-    } );
-});
-
 $(window).scroll(function() {
     if (!mobilecheck()) {
-        $(".header-phone-screen").stop().css({"background-position-y": -($(document).scrollTop()/3) + "px"});
+       
+        if ($(this).scrollTop() > 80) {
+                $("nav").stop().removeClass('header-large').addClass('header-small');
+        }
+        if ($(this).scrollTop() < 80) {
+                $("nav").stop().removeClass('header-small').addClass('header-large');
+        }
+
+        if ($(this).scrollTop() < 500) {
+                $(".header-phone-screen").stop().css({"background-position-y": -($(document).scrollTop()/3) + "px"});
+        }
+
+        if ($(this).scrollTop() > 700) {
+                $(".content-phone-container").stop().addClass('visible');
+        }
+        if ($(this).scrollTop() > 1700) {
+                $(".mockup-phone").stop().addClass('visible');
+        }
+        if ($(this).scrollTop() > 3000) {
+                $(".conversation-timeline-content").stop().addClass('visible');
+        }
+        if ($(this).scrollTop() > 3800) {
+                $("form").stop().addClass('visible');
+        }
+
     }
 
 });
