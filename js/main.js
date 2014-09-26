@@ -11,18 +11,19 @@ $(window).load(mobilecheck);
 
 $(window).scroll(function() {
     if (!mobilecheck()) {
-       
+        
+        if ($(this).scrollTop() == 0) {
+                $(document).stop().find('.current').removeClass('current');
+        }
         if ($(this).scrollTop() > 80) {
                 $("nav").stop().removeClass('header-large').addClass('header-small');
         }
         if ($(this).scrollTop() < 80) {
                 $("nav").stop().removeClass('header-small').addClass('header-large');
         }
-
         if ($(this).scrollTop() < 400) {
                 $(".header-phone-screen").stop().css({"background-position-y": -($(document).scrollTop()/2) + "px"});
         }
-
         if ($(this).scrollTop() > 700) {
                 $(".content-phone-container").stop().addClass('visible');
         }
