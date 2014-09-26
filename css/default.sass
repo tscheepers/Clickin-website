@@ -261,26 +261,31 @@ nav
             float: left
             height: 30px
             font-weight: 300
+            line-height: 20px
+            font-size: 17px
+            color: $gray-light-color
+            cursor: pointer
 
+            &:hover
+                color: $orange-color
+
+                a
+                    color: $orange-color
             &.current
                 border-bottom: 2px solid $orange-color
+                font-weight: 600
+                color: $black-color
                 
                 a
                     color: $black-color
-                    font-weight: 600
                     
                     &:hover
                         color: $gray-light-color
 
 
             a
-                line-height: 20px
-                font-size: 17px
                 color: $gray-light-color
                 text-decoration: none
-
-                &:hover
-                    color: $orange-color
 
 // ------ Responsive ------
 

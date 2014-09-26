@@ -19,8 +19,8 @@ $(window).scroll(function() {
                 $("nav").stop().removeClass('header-small').addClass('header-large');
         }
 
-        if ($(this).scrollTop() < 500) {
-                $(".header-phone-screen").stop().css({"background-position-y": -($(document).scrollTop()/3) + "px"});
+        if ($(this).scrollTop() < 400) {
+                $(".header-phone-screen").stop().css({"background-position-y": -($(document).scrollTop()/2) + "px"});
         }
 
         if ($(this).scrollTop() > 700) {
@@ -37,5 +37,36 @@ $(window).scroll(function() {
         }
 
     }
+    else {
 
+        $("nav").addClass('header-small');
+        $(".content-phone-container").addClass('visible');
+        $(".mockup-phone").addClass('visible');
+        $(".conversation-timeline-content").addClass('visible');
+        $("form").addClass('visible');
+
+    }
+
+});
+$(document).ready(function(){
+
+    /**
+     * Scrollit light scroll animation
+     *
+     * http://www.bytemuse.com/scrollIt.js/
+     **/
+
+    $(function(){
+        $.scrollIt(
+        {
+            topOffset: 0
+        });
+    });
+
+    // Active menu itemd
+
+    $('.menu-item').bind('click', function(){
+        $(document).find('.current').removeClass('current');
+        $(this).addClass('current');
+    })
 });

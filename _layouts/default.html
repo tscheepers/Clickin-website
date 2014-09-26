@@ -60,20 +60,27 @@
 
 				{% assign current = page.url | downcase | split: '/' %}
 				<ul>
-					<li class="menu-item {% if current[0] == '' %}current{% endif %}"><a href="/">Say hello</a></li>
-					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">About</a></li>
-					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Early access</a></li>
-					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li>
+					<li data-scroll-goto="0" class="menu-item">Say hello</li>
+					<li data-scroll-goto="1" class="menu-item">About</li>
+					<li data-scroll-goto="3" class="menu-item">Early access</li>
+					<!-- <li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li> -->
 				</ul>
 			</nav>
 			
 			{{ content }}
 
 		<!--FOOTER -->
-		<footer></footer>
+		<footer class="wrapper wrapper-gray align-center">
+			<div class="footer-content-wrapper">
+				<div class="email"><p><span>Sales:</span> sales@clickin.com</p></div>
+				<div class="footer-logo"></div>
+				<div class="email"><p><span>Press:</span> press@clickin.com</p></div>
+			</div>
+		</footer>
 
 		<!--Scripts-->
 		<script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/lib/scrollit.min.js"></script>
 	</body>
 </html>
