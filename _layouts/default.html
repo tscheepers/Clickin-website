@@ -56,7 +56,7 @@
 	<body>
 		<h1>Clickin</h1>
 		<!--HEADER-->
-			<nav class="wrapper main-nav">
+			<nav id="ha-nav" class="wrapper ha-header-large">
 				<div class="logo"></div>
 
 				{% assign current = page.url | downcase | split: '/' %}
@@ -75,5 +75,24 @@
 
 		<!--Scripts-->
 		<script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="js/lib/modernizr.custom.js"></script>
+		<script type="text/javascript" src="js/lib/waypoints.min.js"></script>
+		<script>
+			var $head = $( '#ha-nav' );
+			$( '.ha-waypoint' ).each( function(i) {
+				var $el = $( this ),
+					animClassDown = $el.data( 'animateDown' ),
+					animClassUp = $el.data( 'animateUp' );
+
+				$el.waypoint( function( direction ) {
+					if( direction === 'down' && animClassDown ) {
+						$head.attr('class', 'ha-header ' + animClassDown);
+					}
+					else if( direction === 'up' && animClassUp ){
+						$head.attr('class', 'ha-header ' + animClassUp);
+					}
+				}, { offset: '100%' } );
+			} );
+		</script>
 	</body>
 </html>

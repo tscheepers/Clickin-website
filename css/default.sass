@@ -5,10 +5,41 @@ body
     font-family: $open-sans
     font-weight: 400
 
+// ------ Animation classes ------
+
+@-Webkit-Keyframes scaleUp
+    0%
+        opacity: 0
+        background-size: 100%
+
+    100%
+        opacity: 1
+        background-size: 105%
+
+.animated
+    -webkit-animation-fill-mode: both
+    -moz-animation-fill-mode: both
+    -ms-animation-fill-mode: both
+    -o-animation-fill-mode: both
+    animation-fill-mode: both
+    -webkit-animation-duration: 1.5s
+    -moz-animation-duration: 1.5s
+    -ms-animation-duration: 1.5s
+    -o-animation-duration: 1.5s
+    animation-duration: 1.5s
+
+    &.scale-bg
+        -webkit-animation-name: scaleUp
+        -moz-animation-name: scaleUp
+        -o-animation-name: scaleUp
+        animation-name: scaleUp
+
+
 // ------ Headings classes ------
 
 h1
-    display: none
+    margin: 0
+    padding: 0
 
 h2
     font-family: $open-sans
@@ -81,18 +112,6 @@ btn:hover,
 
 // ------ Site elements classes ------
 
-.logo
-    display: inline-block
-    position: absolute
-    left: calc(50% - 45px)
-    top: 30px
-    background-image: $logo-image
-    background-size: 100%
-    background-position: center
-    background-repeat: no-repeat
-    height: 100px
-    width: 100px
-
 .icon-down
     width: 30px
     height: 30px
@@ -135,12 +154,80 @@ span.nav-phrase
 
 // ------ Menu classes ------
 
-nav.main-nav
+#ha-nav
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
     display: inline-block
-    height: 160px
-    border-bottom: 1px solid $gray-line-color
     margin-bottom: 1px
     padding: 0 !important
+    background-color: $bg-color
+    z-index: 1000
+    opacity: 0.98
+    filter: alpha(opacity=98)
+
+    .logo
+        display: inline-block
+        position: absolute
+        background-image: $logo-image
+        background-size: 100%
+        background-position: center
+        background-repeat: no-repeat
+
+    &.ha-header-large
+        height: 160px
+        transition: 0.25s
+        -ms-transition: 0.25s
+        -moz-transition: 0.25s
+        -webkit-transition: 0.25s
+
+        .logo
+            left: calc(50% - 50px)
+            top: 30px
+            height: 100px
+            width: 100px
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+        ul
+            -ms-transform: translate(0px, 0x)
+            -moz-transform: translate(0px, 0px)
+            -webkit-transform: translate(0px, 0px)
+            transform: translate(0px, 0px)
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+    &.ha-header-small
+        height: 80px
+        transition: 0.25s
+        -ms-transition: 0.25s
+        -moz-transition: 0.25s
+        -webkit-transition: 0.25s
+
+        .logo
+            left: calc(50% - 25px)
+            top: 15px
+            height: 50px
+            width: 50px
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+        ul
+            -ms-transform: translate(0px, -35px)
+            -moz-transform: translate(0px, -35px)
+            -webkit-transform: translate(0px, -35px)
+            transform: translate(0px, -35px)
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
 
     ul
         position: absolute
@@ -154,7 +241,7 @@ nav.main-nav
         li.menu-item
             list-style-type: none
             padding: 0 0 10px 0
-            margin: 0 40px 0 0
+            margin: 0 30px 0 0
             display: inline-block
             float: left
             height: 30px
@@ -180,6 +267,64 @@ nav.main-nav
                 &:hover
                     color: $orange-color
 
+// ------ Responsive ------
+
+@media (min-width:991px) and (max-width:1100px)
+
+    .header-payoff
+
+        span
+            font-size: 58px !important
+
+@media (max-width:991px)
+    
+    #ha-nav
+
+        ul
+            left: 140px
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+        &.ha-header-large
+
+            .logo
+                left: 30px
+                width: 75px
+                height: 75px
+                top: 40px
+                transition: 0.25s
+                -ms-transition: 0.25s
+                -moz-transition: 0.25s
+                -webkit-transition: 0.25s
+
+
+        &.ha-header-small
+
+            .logo
+                left: 30px
+                transition: 0.25s
+                -ms-transition: 0.25s
+                -moz-transition: 0.25s
+                -webkit-transition: 0.25s
+
+    header
+
+        .header-phone
+            right: 60px
+            left: inherit !important
+
+        .header-payoff
+            right: 350px
+            left: inherit !important
+
+@media (max-width:768px)
+
+    .header-payoff
+
+        span
+            font-size: 58px !important
 
         
     
