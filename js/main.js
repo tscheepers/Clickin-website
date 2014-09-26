@@ -63,10 +63,23 @@ $(document).ready(function(){
         });
     });
 
-    // Active menu itemd
-
+    // Active menu item
     $('.menu-item').bind('click', function(){
         $(document).find('.current').removeClass('current');
         $(this).addClass('current');
     })
+
+    // Make menu items active on icon click in document
+    $('.icon-down.say-hello').bind('click', function(){
+        $(document).find('.current').removeClass('current');
+        $('#say-hello').addClass('current');
+    });
+    $('.icon-down.about').bind('click', function(){
+        $(document).find('.current').removeClass('current');
+        $('#about').addClass('current');
+    });
+    $('.icon-down.access').bind('click', function(){
+        $(document).find('.current').removeClass('current');
+        $('#access').addClass('current');
+    });
 });

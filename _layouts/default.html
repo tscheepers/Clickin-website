@@ -60,9 +60,9 @@
 
 				{% assign current = page.url | downcase | split: '/' %}
 				<ul>
-					<li data-scroll-goto="0" class="menu-item">Say hello</li>
-					<li data-scroll-goto="1" class="menu-item">About</li>
-					<li data-scroll-goto="3" class="menu-item">Early access</li>
+					<li id="say-hello" data-scroll-goto="0" class="menu-item">Say hello</li>
+					<li id="about" data-scroll-goto="1" class="menu-item">About</li>
+					<li id="access" data-scroll-goto="3" class="menu-item">Early access</li>
 					<!-- <li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li> -->
 				</ul>
 			</nav>
