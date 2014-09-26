@@ -20,10 +20,26 @@ header
         display: inline-block
         position: absolute
         top: 60px
-        left: calc(50% - 115px)
+        left: calc(50% - 118px)
         background-image: $header-phone-image
         background-size: 100%
         background-repeat: no-repeat
+        z-index: 98
+
+    .header-phone-screen
+        width: 194px
+        height: 244px
+        display: inline-block
+        position: absolute
+        top: 196px
+        left: calc(50% - 98px)
+        background-image: $header-phone-content-image
+        background-size: 100%
+        background-position-x: center
+        background-position-y: 0
+        background-repeat: no-repeat
+        overflow: hidden
+        z-index: 99
 
     .header-payoff
         width: 360px
