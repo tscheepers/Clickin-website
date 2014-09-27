@@ -5,10 +5,51 @@ body
     font-family: $open-sans
     font-weight: 400
 
+// ------ Animation classes ------
+
+@-Webkit-Keyframes scaleUp
+    0%
+        opacity: 0
+        background-size: 100%
+
+    100%
+        opacity: 1
+        background-size: 105%
+
+.animated
+    -webkit-animation-fill-mode: both
+    -moz-animation-fill-mode: both
+    -ms-animation-fill-mode: both
+    -o-animation-fill-mode: both
+    animation-fill-mode: both
+    -webkit-animation-duration: 1.5s
+    -moz-animation-duration: 1.5s
+    -ms-animation-duration: 1.5s
+    -o-animation-duration: 1.5s
+    animation-duration: 1.5s
+
+    &.scale-bg
+        -webkit-animation-name: scaleUp
+        -moz-animation-name: scaleUp
+        -o-animation-name: scaleUp
+        animation-name: scaleUp
+
+.visible
+    opacity: 1 !important
+    filter: alpha(opacity=100) !important
+    transition: 1s
+    -ms-transition: 1s
+    -moz-transition: 1s
+    -webkit-transition: 1s
+    -ms-transform: translate(0px, 0x) !important
+    -moz-transform: translate(0px, 0px) !important
+    -webkit-transform: translate(0px, 0px) !important
+
 // ------ Headings classes ------
 
 h1
-    display: none
+    margin: 0
+    padding: 0
 
 h2
     font-family: $open-sans
@@ -81,18 +122,6 @@ btn:hover,
 
 // ------ Site elements classes ------
 
-.logo
-    display: inline-block
-    position: absolute
-    left: calc(50% - 45px)
-    top: 30px
-    background-image: $logo-image
-    background-size: 100%
-    background-position: center
-    background-repeat: no-repeat
-    height: 100px
-    width: 100px
-
 .icon-down
     width: 30px
     height: 30px
@@ -101,6 +130,14 @@ btn:hover,
     background-size: 100%
     background-position: center
     background-repeat: no-repeat
+    cursor: pointer
+
+    &:hover
+        background-image: $icon-down-filled
+        transition: 0s
+        -ms-transition: 0s
+        -moz-transition: 0s
+        -webkit-transition: 0s
 
 span.nav-phrase
     height: 30px
@@ -135,18 +172,91 @@ span.nav-phrase
 
 // ------ Menu classes ------
 
-nav.main-nav
+nav
+    position: fixed !important
+    left: 0
+    top: 0
+    width: 100%
     display: inline-block
-    height: 160px
-    border-bottom: 1px solid $gray-line-color
     margin-bottom: 1px
     padding: 0 !important
+    background-color: $bg-color
+    z-index: 1000
+    opacity: 0.98
+    filter: alpha(opacity=98)
+    height: 160px
+
+    .logo
+        display: inline-block
+        position: absolute
+        background-image: $logo-image
+        background-size: 100%
+        background-position: center
+        background-repeat: no-repeat
+
+    &.header-large
+        height: 160px
+        transition: 0.25s
+        -ms-transition: 0.25s
+        -moz-transition: 0.25s
+        -webkit-transition: 0.25s
+
+        .logo
+            left: calc(50% - 50px)
+            top: 30px
+            height: 100px
+            width: 100px
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+        ul
+            -ms-transform: translate(0px, 0x)
+            -moz-transform: translate(0px, 0px)
+            -webkit-transform: translate(0px, 0px)
+            transform: translate(0px, 0px)
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+    &.header-small
+        height: 80px
+        transition: 0.25s
+        -ms-transition: 0.25s
+        -moz-transition: 0.25s
+        -webkit-transition: 0.25s
+        box-shadow: 0 0 5px #dddddd
+        -ms-box-shadow: 0 0 5px #dddddd
+        -moz-box-shadow: 0 0 5px #dddddd
+        -webkit-box-shadow: 0 0 5px #dddddd
+
+        .logo
+            left: calc(50% - 25px)
+            top: 15px
+            height: 50px
+            width: 50px
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+        ul
+            -ms-transform: translate(0px, -35px)
+            -moz-transform: translate(0px, -35px)
+            -webkit-transform: translate(0px, -35px)
+            transform: translate(0px, -35px)
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
 
     ul
         position: absolute
         width: auto
         height: 30px
-        top: 65px
+        top: 68px
         left: calc(50% + 80px)
         padding: 0
         margin: 0
@@ -154,32 +264,99 @@ nav.main-nav
         li.menu-item
             list-style-type: none
             padding: 0 0 10px 0
-            margin: 0 40px 0 0
+            margin: 0 30px 0 0
             display: inline-block
             float: left
             height: 30px
             font-weight: 300
+            line-height: 20px
+            font-size: 17px
+            color: $gray-light-color
+            cursor: pointer
 
+            &:hover
+                color: $orange-color
+
+                a
+                    color: $orange-color
             &.current
                 border-bottom: 2px solid $orange-color
+                font-weight: 600
+                color: $black-color
                 
                 a
                     color: $black-color
-                    font-weight: 600
                     
                     &:hover
                         color: $gray-light-color
 
 
             a
-                line-height: 20px
-                font-size: 17px
                 color: $gray-light-color
                 text-decoration: none
 
-                &:hover
-                    color: $orange-color
+// ------ Responsive ------
 
+@media (min-width:991px) and (max-width:1100px)
+
+    .header-payoff
+
+        span
+            font-size: 58px !important
+
+@media (max-width:991px)
+    
+    nav
+
+        ul
+            left: 140px
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+        &.header-large
+
+            .logo
+                left: 30px
+                width: 75px
+                height: 75px
+                top: 40px
+                transition: 0.25s
+                -ms-transition: 0.25s
+                -moz-transition: 0.25s
+                -webkit-transition: 0.25s
+
+
+        &.header-small
+
+            .logo
+                left: 30px
+                transition: 0.25s
+                -ms-transition: 0.25s
+                -moz-transition: 0.25s
+                -webkit-transition: 0.25s
+
+    header
+
+        .header-phone
+            right: 60px
+            left: inherit !important
+
+        .header-phone-screen
+            right: 76px
+            left: inherit !important
+
+        .header-payoff
+            right: 350px
+            left: inherit !important
+
+@media (max-width:768px)
+
+    .header-payoff
+
+        span
+            font-size: 58px !important
 
         
     
