@@ -3,6 +3,12 @@
 .fancy-select
     position: relative
 
+    &.focus
+
+        .trigger
+            border: 2px solid $orange-color
+            outline: 0 !important
+
 
     .trigger
         border: 2px solid $gray-color
@@ -20,6 +26,7 @@
         cursor: pointer
         color: $gray-color
         overflow: hidden
+        position: relative
 
         &:after
             content: ''

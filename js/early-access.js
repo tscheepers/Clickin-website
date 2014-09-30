@@ -1,6 +1,7 @@
     $('#submit').bind('click', function() {
 
         $('label').hide();
+        $('form').find('.focus').removeClass('focus');
       
         // validatin and process form here
         var name = $('input#name').val();
@@ -19,14 +20,14 @@
                 $("input#city").focus().prev('label').html('Please submit a city.').fadeIn(250);
                 return false;
             }
-        var country = $('#country option:selected').val();
+        var country = $('input#country').val();
             if (country == "") {
-                $("#country").focus().prev('label').html('Please submit a country.').fadeIn(250);
+                 $("input#country").focus().prev('label').html('Please submit a country.').fadeIn(250);
                 return false;
             }
         var platform = $('#platform option:selected').val();
             if (platform == "") {
-                $("#platform").focus().prev('label').html('Please submit a platform.').fadeIn(250);
+                $("#platform").closest('.fancy-select').addClass('focus').prev('label').html('Please submit a platform.').fadeIn(250);
                 return false;
             }
         var terms = $('#terms:checked').val();
@@ -50,9 +51,9 @@
             },
             error: function(){
                 $('.flash').html('').addClass('error').html('Oops something went wrong. Please contact us for early access.').fadeIn(100);
-                 setTimeout( function(){
-                    $('.flash.error').fadeOut(1000);
-                }, 3000);
+                $('.flash').bind('click', function(){
+                    $(this).fadeOut();
+                });
             }
 
         });
