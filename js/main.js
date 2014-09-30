@@ -83,4 +83,7 @@ $(document).ready(function(){
         $(document).find('.current').removeClass('current');
         $('#access').addClass('current');
     });
+
+
+    $('select').fancySelect();
 });

@@ -1,0 +1,93 @@
+@import includes
+
+.fancy-select
+    position: relative
+
+
+    .trigger
+        border: 2px solid $gray-color
+        height: 40px
+        border-radius: 20px
+        -ms-border-radius: 20px
+        -moz-border-radius: 20px
+        -webkit-border-radius: 20px
+        width: 300px
+        background-color: white
+        padding: 0 40px 0 20px
+        font-size: 16px
+        line-height: 36px
+        text-align: left
+        cursor: pointer
+        color: $gray-color
+        overflow: hidden
+
+        &:after
+            content: ''
+            position: absolute
+            top: 16px
+            right: 20px
+            width: 0
+            height: 0
+            border-top: 10px solid $gray-color
+            border-right: 8px solid transparent
+            border-left: 8px solid transparent
+
+        &.open:after
+            -ms-transform: rotate(180deg)
+            -webkit-transform: rotate(180deg)
+            transform: rotate(180deg)
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+        &:hover
+            color: $orange-color
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+    ul.options
+        display: none
+        position: absolute
+        list-style-type: none
+        padding: 10px 20px
+        text-align: left
+        margin-top: 5px
+        height: auto
+        display: none
+        opacity: 0
+        filter: alpha(opacity=0)
+        z-index: 999
+
+        li
+            cursor: pointer
+            width: 100%
+            height: 30px
+            padding: 5px 0
+            line-height: 20px
+            font-size: 16px
+            color: $gray-color
+
+            &:hover
+                color: $orange-color
+                transition: 0.25s
+                -ms-transition: 0.25s
+                -moz-transition: 0.25s
+                -webkit-transition: 0.25s
+
+            &.selected
+                font-weight: 700 !important
+
+        &.open
+            display: block
+            background-color: white
+            width: 300px
+            border: 2px solid $gray-color
+            border-radius: 20px
+            -ms-border-radius: 20px
+            -moz-border-radius: 20px
+            -webkit-border-radius: 20px
+            opacity: 0.95
+            filter: alpha(opacity=95)
