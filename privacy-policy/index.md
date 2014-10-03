@@ -27,8 +27,7 @@ In General. We may use information that we collect about you to:
 * enforce or exercise any rights in our Terms of Use; and
 * perform functions or services as otherwise described to you at the time of collection.
 
-#### Job applicants.
-If your personal information is submitted through our website when applying for a position with our company, the information will be used solely in connection with considering and acting upon your application. We may retain your personal information, but only for the purpose of considering your application for current or future available positions. This information, which may include your name and contact information, prior education and experience, and other information you provide to us, may be shared with third-party service providers retained by us to collect, maintain and analyze candidate submissions for job postings.
+*Job applicants.* If your personal information is submitted through our website when applying for a position with our company, the information will be used solely in connection with considering and acting upon your application. We may retain your personal information, but only for the purpose of considering your application for current or future available positions. This information, which may include your name and contact information, prior education and experience, and other information you provide to us, may be shared with third-party service providers retained by us to collect, maintain and analyze candidate submissions for job postings.
 
 In all circumstances, we may perform these functions directly or use a third party vendor to perform these functions on our behalf who will be obligated to use your personal information only to perform services for us. Also, if you access our Service from a third party social platform, such as Facebook, we may share non-personal information with that platform to the extent permitted by your agreement with it and its privacy settings.
 
