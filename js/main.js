@@ -84,11 +84,6 @@ $(document).ready(function(){
             $('ul#page-menu').removeClass('hidden').show();
         }   
     });
-    
-   
-
-
-
 
     /**
      * Scrollit light scroll animation
