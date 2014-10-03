@@ -1,4 +1,11 @@
-Welcome to Clickin, operated by Clickin B.V. (the “Company” or “Clickin”).
+---
+title: Terms of service
+layout: empty
+---
+
+#Terms of service
+
+Welcome to Clickin, operated by Clickin B.V. (the **“Company”** or **“Clickin”**).
 
 By accessing the Clickin application or its website found at www.clickin.co, whether through a mobile device, mobile application or computer (collectively, the “Service”) you agree to be bound by these Terms of Use (this “Agreement”), whether or not you create a Clickin account. If you wish to create a Clickin account and make use of the Service, please read these Terms of Use.
 

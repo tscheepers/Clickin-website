@@ -4,7 +4,7 @@ layout: default
 css: home.css
 ---
 
-<header class="wrapper animated scale-bg">
+<header id="home" data-scroll-index="0" class="wrapper animated scale-bg">
 	<div class="header-phone-screen"></div>
 	<div class="header-phone"></div>
 	<h1 class="header-payoff">
@@ -14,19 +14,19 @@ css: home.css
 		<span>people,</span>
 		<span>effortlessly.</span>
 	</h1>
-	<div class="app-store header"></div>
+	<div data-scroll-goto="4" class="early-access header">Get early access</div>
 </header>
 <section class="wrapper wrapper-white small-padding-top">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
 				<span class="nav-phrase align-center">Say hello to Clickin.</span>
-				<div data-scroll-goto="0" class="icon-down align-center say-hello"></div>
+				<div data-scroll-goto="1" class="icon-down align-center say-hello"></div>
 			</div>
 		</div>
 	</div>
 </section>
-<section data-scroll-index="0" class="wrapper wrapper-gray">
+<section id="app" data-scroll-index="1" class="wrapper wrapper-gray">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -56,12 +56,12 @@ css: home.css
 					</div>
 				</div>
 				<span class="nav-phrase align-center">Start your own activity.</span>
-				<div data-scroll-goto="1" class="icon-down align-center about"></div>
+				<div data-scroll-goto="2" class="icon-down align-center about"></div>
 			</div>
 		</div>
 	</div>
 </section>
-<section data-scroll-index="1" class="wrapper wrapper-white">
+<section data-scroll-index="2" class="wrapper wrapper-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 relative">
@@ -84,12 +84,12 @@ css: home.css
 			</div>
 			<div class="col-xs-12 align-center relative">
 				<span class="nav-phrase align-center">Lets get together, have fun.</span>
-				<div data-scroll-goto="2" class="icon-down align-center"></div>
+				<div data-scroll-goto="3" class="icon-down align-center"></div>
 			</div>
 		</div>
 	</div>
 </section>
-<section data-scroll-index="2" class="wrapper wrapper-gray">
+<section data-scroll-index="3" class="wrapper wrapper-gray">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-md-10 col-md-offset-1 conversation-title">
@@ -130,12 +130,12 @@ css: home.css
 				
 			<div class="col-xs-12">
 				<span class="nav-phrase align-center">Start today to find new friends.</span>
-				<div data-scroll-goto="3" class="icon-down align-center access"></div>
+				<div data-scroll-goto="4" class="icon-down align-center access"></div>
 			</div>
 		</div>
 	</div>
 </section>
-<section data-scroll-index="3" class="wrapper wrapper-white">
+<section data-scroll-index="4" class="wrapper wrapper-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 relative">
@@ -189,7 +189,7 @@ css: home.css
 				    <div class="input checkbox">
 				    	<label for="checkbox"></label>
 				    	<input id="terms" type="checkbox"></input>
-				    	<span>I agree with the terms</span>
+				    	<span>I agree with the <a href="/terms-of-service/">terms of service</a></span>
 				    </div>
 
 				     <div class="input submit">
@@ -197,6 +197,10 @@ css: home.css
 				     	<!-- <input class="submit" type="submit" value="Get early access" /> -->
 				     </div>
 				</form>
+			</div>
+			<div class="col-xs-12">
+				<span class="nav-phrase align-center">We keep you up informed.</span>
+				<div data-scroll-goto="5" class="icon-down align-center contact"></div>
 			</div>
 		</div>
 	</div>

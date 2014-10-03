@@ -1,3 +1,10 @@
+---
+title: Privacy policy
+layout: empty
+---
+
+##Privacy Policy
+
 Clickin B.V. (“Clickin,” “we,” and “us”) respects the privacy of its users (“you”) and has developed this Privacy Policy to demonstrate its commitment to protecting your privacy. This Privacy Policy describes the information we collect, how that information may be used, with whom it may be shared, and your choices about such uses and disclosures. We encourage you to read this Privacy Policy carefully when using our application or services or transacting business with us. By using our website or application (our “Service”), you are accepting the practices described in this Privacy Policy.
 
 If you have any questions about our privacy practices, please refer to the end of this Privacy Policy for information on how to contact us.

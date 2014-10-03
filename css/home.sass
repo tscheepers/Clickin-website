@@ -1,5 +1,8 @@
 @import default
 
+p
+    padding: 0
+
 // ------ Header classes ------
 
 header
@@ -48,6 +51,7 @@ header
         position: absolute
         top: 155px
         left: calc(50% - 535px)
+        margin: 0
 
         span
             width: 100%
@@ -259,8 +263,9 @@ header
         opacity: 0
         filter: alpha(opacity=0)
         width: 300px
-        margin: 0 auto
+        margin: 0 auto 80px auto
         position: relative
+
 
         .flash
             position: absolute
@@ -325,6 +330,7 @@ header
                     width: auto !important
                     padding: 10px 20px
                     line-height: 20px
+                    margin-top: 20px
 
                     &:hover
                         background-color: $orange-color
@@ -353,35 +359,4 @@ header
                     margin-left: 20px
                     height: 20px
                     line-height: 20px
-
-// ------ Footer ------
-
-footer
-
-    .footer-content-wrapper
-        width: auto
-        display: inline-block
-        margin: 0 auto
-
-        .email
-            display: block
-            width: auto
-            float: left
-            height: 30px
-            line-height: 30px
-            margin: 15px 20px
-
-            p
-                width: auto
-        
-        .footer-logo
-            display: block
-            position: relative
-            background-image: $logo-image
-            background-size: 100%
-            background-position: center
-            background-repeat: no-repeat
-            height: 60px
-            width: 60px
-            float: left
 

@@ -57,37 +57,63 @@
 	<body>
 		<!--HEADER-->
 			<nav class="wrapper header-large">
-				<div class="logo"></div>
+				<a href="/" class="logo"></a>
 
-				<div class="app-store nav small"></div>
-				<div class="app-store nav big"></div>
+				<div data-scroll-goto="4" class="early-access nav">Get early access</div>
 
 				{% assign current = page.url | downcase | split: '/' %}
-				<ul>
-					<li id="say-hello" data-scroll-goto="0" class="menu-item">Say hello</li>
-					<li id="about" data-scroll-goto="1" class="menu-item">About</li>
-					<li id="access" data-scroll-goto="3" class="menu-item">Early access</li>
-					<!-- <li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li> -->
+				
+				<ul id="home-menu">
+						<li data-scroll-goto="0" class="menu-item {% if current[0] == '' %}current{% endif %}">Home</li>
+						<li id="clickin-app-menu-item" data-scroll-goto="1" class="menu-item">Clickin app</li>
+						<li id="contact-menu-item" data-scroll-goto="5" class="menu-item">Contact</li>
+				</ul>
+
+				<ul id="page-menu" class="hidden">
+						<li class="menu-item"><a href="/#home">Home</a></li>
+						<li class="menu-item"><a href="/#app">Clickin app</a></li>
+						<li data-scroll-goto="5" class="menu-item">Contact</li>
 				</ul>
 			</nav>
 			
 			{{ content }}
 
 		<!--FOOTER -->
-		<footer class="wrapper wrapper-gray align-center">
-			<div class="footer-content-wrapper">
-				<div class="email"><p><span>Sales:</span> sales@clickin.com</p></div>
-				<div class="footer-logo"></div>
-				<div class="email"><p><span>Press:</span> press@clickin.com</p></div>
+		<footer data-scroll-index="5" class="wrapper wrapper-gray">
+			<div class="container footer-content-container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>Follow <span>Clickin.</span></h2>
+						<p class="leading align-center">
+							On Facebook and Twitter.
+						</p>
+					</div>
+
+					<div class="col-xs-12 align-center">
+						<div class="social-logos">
+							<a href="https://www.facebook.com/pages/Clickin/624147367698540" target="_blank" class="social-logo fb"></a>
+							<a href="https://twitter.com/LetsClickin" target="_blank" class="social-logo twitter"></a>
+						</div>
+						<div class="store-logo app-store"></div>
+						<div class="store-logo google-play"></div>
+					</div>
+					<div class="col-xs-12 align-center">
+						<div class="footer-links">
+							<span>Say hello at <a href="mailto:hello@lclickin.com">hello@clickin.com</a></span>
+							<span>Our <a href="/privacy-policy/">privacy policy</a> and <a href="/terms-of-service/">terms of service</a></span>
+							<span>Developed with love by <a href="http://www.label305.com" target="_blank">Label305</a></span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 
 		<!--Scripts-->
-		<script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/lib/scrollit.min.js"></script>
-		<script type="text/javascript" src="js/lib/jquery-ui-1.11.1.js"></script>
-		<script type="text/javascript" src="js/lib/fancySelect.js"></script>
-		<script type="text/javascript" src="js/early-access.js"></script>
+		<script type="text/javascript" src="../js/lib/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>
+		<script type="text/javascript" src="../js/lib/scrollit.min.js"></script>
+		<script type="text/javascript" src="../js/lib/jquery-ui-1.11.1.js"></script>
+		<script type="text/javascript" src="../js/lib/fancySelect.js"></script>
+		<script type="text/javascript" src="../js/early-access.js"></script>
 	</body>
 </html>

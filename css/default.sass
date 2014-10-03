@@ -3,7 +3,7 @@
 body
     background-color: $bg-color
     font-family: $open-sans
-    font-weight: 400
+    font-weight: 300
 
 // ------ Animation classes ------
 
@@ -50,6 +50,14 @@ body
 h1
     margin: 0
     padding: 0
+    font-family: $open-sans
+    font-weight: 300
+    font-size: 50px
+    line-height: 60px
+    color: $black-color
+    margin: 30px 0 15px 0
+    padding: 0
+    text-align: center
 
 h2
     font-family: $open-sans
@@ -64,15 +72,26 @@ h2
     span
         color: $orange-color
         font-family: $bree-serif
+h3
+    font-family: $open-sans
+    font-weight: 300
+    font-size: 25px
+    line-height: 25px
+
+h4
+    font-family: $bree-serif
+    font-weight: 400
+    font-size: 22px
+    color: $gray-light-color
 
 p
     font-family: $open-sans
     font-weight: 300
     font-size: 16px
-    line-height: 25px
+    line-height: 30px
     color: $black-color
     margin: 0
-    padding: 0
+    padding: 0 0 15px 0
 
     span
         color: $orange-color
@@ -81,7 +100,42 @@ p
     &.leading
         font-size: 22px
 
+a
+    color: $orange-color
+    text-decoration: none
 
+    &:hover
+        color: $orange-color !important
+        text-decoration: underline
+
+ol,ul
+    padding-left: 20px
+    margin-bottom: 25px
+    margin-left: 20px
+    font-size: 16px
+    font-weight: 400
+    line-height: 25px
+
+    li
+        line-height: 30px
+        margin-bottom: 15px
+
+        strong
+            width: 100%
+            margin-bottom: 5px
+            display: block
+
+        ol
+            list-style-type: upper-roman
+        ul
+            margin-top: 25px
+            list-style-type: disc
+
+            li
+                line-height: 30px
+ol
+    li
+        margin-bottom: 15px
 
 // ------ Standard classes ------
 .wrapper
@@ -132,18 +186,75 @@ btn:hover,
 
     &.header
         display: block
-        width: 200px
-        height: 60px
-        right: calc(50% - 370px)
+        width: 270px
+        height: 80px
+        right: calc(50% - 440px)
         bottom: 60px
 
     &.nav
         display: none
-        right: 60px
+        right: 20px
         bottom: 20px
 
         &.big
             display: none
+.early-access
+    position: absolute
+    height: 40px
+    width: auto
+    padding: 10px 20px
+    display: inline-block
+    border-radius: 20px
+    -ms-border-radius: 20px
+    -moz-border-radius: 20px
+    -webkit-border-radius: 20px
+    font-size: 18px
+    line-height: 20px
+    font-family: $bree-serif
+    cursor: pointer
+    
+    &.nav
+        right: 20px
+        bottom: 20px
+        display: none
+        color: $orange-color
+        border: 2px solid $orange-color
+        background-color: white
+
+        &:hover
+            background-color: $orange-color
+            color: white
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+    &.header
+        height: 60px
+        line-height: 40px
+        font-size: 30px
+        padding: 10px 30px
+        border-radius: 30px
+        -ms-border-radius: 30px
+        -moz-border-radius: 30px
+        -webkit-border-radius: 30px
+        background-color: transparent
+        color: white
+        border: 2px solid white
+        right: calc(50% - 440px)
+        bottom: 90px
+
+        &:hover
+            border: 2px solid $orange-color
+            background-color: $orange-color
+            color: white
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+
+
 
 
 // ------ Site elements classes ------
@@ -208,8 +319,6 @@ nav
     padding: 0 !important
     background-color: $bg-color
     z-index: 1000
-    opacity: 0.98
-    filter: alpha(opacity=98)
     height: 160px
 
     .logo
@@ -320,6 +429,92 @@ nav
             a
                 color: $gray-light-color
                 text-decoration: none
+// ------ Footer ------
+
+footer
+
+    padding-bottom: 80px !important
+
+    .footer-content-container
+
+        ul.footer-menu
+            list-style-type: none
+            padding: 0
+            margin: 0 auto
+
+            li
+                display: block
+
+        .footer-links
+            display: block
+            margin: 40px auto 0 auto
+
+            span
+                display: inline-block
+                margin: 0 20px 0 0
+                font-weight: 400
+
+                a
+                    color: $black-color
+                    text-decoration: underline
+
+        .social-logos
+            margin: 40px 0 80px 0
+
+            .social-logo
+                width: 60px
+                height: 60px
+                display: block
+                background-size: 100%
+                background-position: center
+                background-repeat: no-repeat
+                display: inline-block
+                margin: 0 10px
+                opacity: 0.8
+                filter: alpha(opacity=80)
+
+                &:hover
+                    opacity: 1
+                    filter: alpha(opacity=100)
+                    transition: 0.25s
+                    -ms-transition: 0.25s
+                    -moz-transition: 0.25s
+                    -webkit-transition: 0.25s
+
+
+                &.fb
+                    background-image: $fb-logo
+
+                &.twitter
+                    background-image: $twitter-logo
+
+        .footer-logo
+            display: block
+            position: relative
+            background-image: $logo-image
+            background-size: 100%
+            background-position: center
+            background-repeat: no-repeat
+            height: 60px
+            width: 60px
+            float: left
+
+        .store-logo
+            display: inline-block
+            margin: 0 10px
+            position: relative
+            background-size: 100%
+            background-position: center
+            background-repeat: no-repeat
+            width: 230px
+            height: 80px
+
+            &.app-store
+                background-image: $app-store
+            
+            &.google-play
+                background-image: $google-play
+
 
 // ------ Responsive ------
 
@@ -329,6 +524,9 @@ nav
 
         span
             font-size: 58px !important
+
+@media (min-width:1080px) and (max-width:1250px)
+
 
 @media (max-width:1080px)
     
@@ -375,12 +573,22 @@ nav
         &.header
             display: none !important
 
-        &.nav.big
-            display: block !important
-            right: 60px
-            bottom: 50px
-            width: 200px
-            height: 60px
+        &.nav
+
+            &.small
+                right: 60px
+
+            &.big
+                display: block !important
+                right: 60px
+                bottom: 50px
+                width: 200px
+                height: 60px
+
+    .early-access
+        
+        &.header
+            display: none !important
 
     header
 
@@ -402,6 +610,11 @@ nav
 
         span
             font-size: 58px !important
+    
+    .container,
+    header
+        width: 750px !important
+
 
         
     
