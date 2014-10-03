@@ -74,6 +74,6 @@ We will occasionally update this Privacy Policy. When we post changes to this Pr
 If you have any questions about this Privacy Policy, please contact us by email or postalmail as follows:
 
 
-Clickin B.V.
-The Netherlands
+Clickin B.V. 
+The Netherlands 
 privacy@clickin.co
