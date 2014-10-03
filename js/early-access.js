@@ -37,7 +37,7 @@
                 return false;
             }
 
-        var dataString = JSON.stringify($('form').serialize());
+        var dataString = $('form').serialize();
 
             url = '';
             url = $('form').attr('action');
