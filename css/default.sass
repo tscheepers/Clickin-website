@@ -3,7 +3,7 @@
 body
     background-color: $bg-color
     font-family: $open-sans
-    font-weight: 400
+    font-weight: 300
 
 // ------ Animation classes ------
 
@@ -50,6 +50,14 @@ body
 h1
     margin: 0
     padding: 0
+    font-family: $open-sans
+    font-weight: 300
+    font-size: 50px
+    line-height: 60px
+    color: $black-color
+    margin: 30px 0 15px 0
+    padding: 0
+    text-align: center
 
 h2
     font-family: $open-sans
@@ -64,15 +72,26 @@ h2
     span
         color: $orange-color
         font-family: $bree-serif
+h3
+    font-family: $open-sans
+    font-weight: 300
+    font-size: 25px
+    line-height: 25px
+
+h4
+    font-family: $bree-serif
+    font-weight: 400
+    font-size: 22px
+    color: $gray-light-color
 
 p
     font-family: $open-sans
     font-weight: 300
     font-size: 16px
-    line-height: 25px
+    line-height: 30px
     color: $black-color
     margin: 0
-    padding: 0
+    padding: 0 0 15px 0
 
     span
         color: $orange-color
@@ -81,7 +100,42 @@ p
     &.leading
         font-size: 22px
 
+a
+    color: $orange-color
+    text-decoration: none
 
+    &:hover
+        color: $orange-color !important
+        text-decoration: underline
+
+ol,ul
+    padding-left: 20px
+    margin-bottom: 25px
+    margin-left: 20px
+    font-size: 16px
+    font-weight: 400
+    line-height: 25px
+
+    li
+        line-height: 30px
+        margin-bottom: 15px
+
+        strong
+            width: 100%
+            margin-bottom: 5px
+            display: block
+
+        ol
+            list-style-type: upper-roman
+        ul
+            margin-top: 25px
+            list-style-type: disc
+
+            li
+                line-height: 30px
+ol
+    li
+        margin-bottom: 15px
 
 // ------ Standard classes ------
 .wrapper
@@ -265,8 +319,6 @@ nav
     padding: 0 !important
     background-color: $bg-color
     z-index: 1000
-    opacity: 0.98
-    filter: alpha(opacity=98)
     height: 160px
 
     .logo
@@ -400,13 +452,11 @@ footer
             span
                 display: inline-block
                 margin: 0 20px 0 0
+                font-weight: 400
 
                 a
                     color: $black-color
                     text-decoration: underline
-
-                    &:hover
-                        color: $orange-color !important
 
         .social-logos
             margin: 40px 0 80px 0

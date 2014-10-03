@@ -1,4 +1,9 @@
+---
+title: Safety
+layout: empty
+---
 
+#Safety
 
 The safety of our users is very important to us. There are steps that everyone can follow to ensure their safety while using Clickin. Please take a few minutes to read these tips.
 
@@ -11,6 +16,7 @@ You are in control of your Clickin experience at all times – remain anonymous 
 Note: Clickin will never send you an email asking for your username and password information. Any such communication should be reported immediately.
 
 **Spam/Scammers There are red flags to watch out for that may indicate you're dealing with a scammer. Be aware of anyone who:**
+
 * Sends you messages containing links to third-party websites
 * Quickly asks to talk or chat on an outside of Clickin
 * Asks you for money
@@ -18,6 +24,7 @@ Note: Clickin will never send you an email asking for your username and password
 * Asks for your address under the guise of sending flowers or gifts
 
 **Report suspicious users Please report anyone who violates our terms of use. Examples of terms of use violations include:**
+
 * Asking you for money or donations
 * Anyone that looks like they could be under the age of 13
 * Users sending harassing or offensive messages
