@@ -47,7 +47,7 @@
             url: url,
             data: dataString,
             success: function() {
-                
+                alert('success');
             },
             error: function(){
                 $('.flash').html('').addClass('error').html('Oops something went wrong. Please contact us for early access.').fadeIn(100);
