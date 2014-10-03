@@ -56,10 +56,6 @@
                         $('<span></span>').html(' Lets Clickin!')
                     )
                 ).fadeIn(100);
-                setTimeout(
-                    function() {
-                        $('.flash').fadeOut().removeClass('success');;
-                }, 1500);
             },
             error: function(request) {
 
