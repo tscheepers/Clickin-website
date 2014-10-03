@@ -15,12 +15,25 @@ $(window).scroll(function() {
         if ($(this).scrollTop() == 0) {
                 $(document).stop().find('.current').removeClass('current');
         }
+
         if ($(this).scrollTop() > 80) {
                 $("nav").stop().removeClass('header-large').addClass('header-small');
+        } else{
+            $("nav").stop().removeClass('header-small').addClass('header-large');
         }
-        if ($(this).scrollTop() < 80) {
-                $("nav").stop().removeClass('header-small').addClass('header-large');
+
+        if ($(this).scrollTop() > 375) {
+                $(".app-store.header").stop().fadeOut(100);
+        } else {
+            $(".app-store.header").stop().fadeIn(100);
         }
+
+        if ($(this).scrollTop() < 375) {
+                $(".app-store.nav.small").stop().fadeOut(100);
+        } else {
+            $(".app-store.nav.small").stop().fadeIn(100);
+        }
+
         if ($(this).scrollTop() < 400) {
                 $(".header-phone-screen").stop().css({"background-position-y": -($(document).scrollTop()/2) + "px"});
         }
@@ -83,4 +96,7 @@ $(document).ready(function(){
         $(document).find('.current').removeClass('current');
         $('#access').addClass('current');
     });
+
+
+    $('select').fancySelect();
 });

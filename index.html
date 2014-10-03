@@ -14,6 +14,7 @@ css: home.css
 		<span>people,</span>
 		<span>effortlessly.</span>
 	</h1>
+	<div class="app-store header"></div>
 </header>
 <section class="wrapper wrapper-white small-padding-top">
 	<div class="container">
@@ -148,22 +149,52 @@ css: home.css
 
 				<!--TODO: Bitchin checkbox, default value -->
 
-				<form id="form" method="post">
+				<form id="early-access-form" method="post" action="http://clickin-dev.appspot.com/early_access_requests">
+				    
+				    <div class="flash"></div>
+
 				    <div class="input">
-				    	<input type="text" name="name" id="name" value="name"/>
+				    	<label for="name"></label>
+				    	<input type="text" name="name" id="name" placeholder="name"/>
 				    </div>
 
 				    <div class="input">
-				    	<input type="text" name="email" id="email" value="email"/>
+				    	<label for="email"></label>
+				    	<input type="text" name="email" id="email" placeholder="email"/>
+				    	<span class="small">iOS, Android or Windows phone account email.</span>
 				    </div>
+
+				    <div class="input">
+				    	<label for="city"></label>
+				    	<input type="text" name="city" id="city" placeholder="city"/>
+				    </div>
+
+				    <div class="input">
+				    	<label for="country"></label>
+				    	<input type="text" name="country" id="country" placeholder="country"/>
+				    </div>
+
+				    <div class="input">
+				    	<label for="platform"></label>
+				    	<select name="platform" id="platform">
+						  	<option value="">Select a platform</option>
+						  	<option value="android">Android</option>
+						  	<option value="ios">iOS</option> 
+						  	<option value="windows-phone">Windows Phone</option>
+						  	<option value="other">Other</option>
+  						</select>
+				    </div>
+
 
 				    <div class="input checkbox">
-				    	<input type="checkbox"></input>
+				    	<label for="checkbox"></label>
+				    	<input id="terms" type="checkbox"></input>
 				    	<span>I agree with the terms</span>
 				    </div>
 
 				     <div class="input submit">
-				     	<input class="submit" type="submit" value="Get early access" />
+				     	<input id="submit" class="submit" type="button" value="Get early access"/>
+				     	<!-- <input class="submit" type="submit" value="Get early access" /> -->
 				     </div>
 				</form>
 			</div>

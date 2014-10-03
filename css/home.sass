@@ -258,12 +258,51 @@ header
     form
         opacity: 0
         filter: alpha(opacity=0)
+        width: 300px
+        margin: 0 auto
+        position: relative
+
+        .flash
+            position: absolute
+            left: 0
+            top: 0
+            height: 100%
+            width: 300px
+            display: block
+            z-index: 999
+            display: none
+            padding: 40px
+            font-size: 16px
+            font-weight: 600
+            line-height: 25px
+
+            &.error
+                background-color: rgba(248,248,248,0.75)
 
 
         .input
             margin: 0 auto 20px auto
             width: 300px
-            
+            min-height: 40px
+            position: relative
+            display: block
+
+            label
+                display: none
+                width: 100%
+                float: left
+                text-align: center
+
+            span
+                color: $gray-light-color
+                margin: 0
+                padding: 0
+                display: block
+                font-size: 16px
+
+                &.small
+                    font-size: 12px
+                    margin-top: 5px
 
             input
                 border: 2px solid $gray-color
@@ -274,9 +313,9 @@ header
                 -webkit-border-radius: 20px
                 width: 300px
                 background-color: white
-                padding: 0 20px
-                font-size: 18px
-                line-height: 40px
+                padding: 10px 20px
+                font-size: 16px
+                line-height: 20px
 
                 &.submit
                     border: 2px solid $orange-color
@@ -284,11 +323,19 @@ header
                     color: $orange-color
                     font-size: 18px
                     width: auto !important
+                    padding: 10px 20px
+                    line-height: 20px
 
                     &:hover
                         background-color: $orange-color
                         color: white
-
+                &:focus
+                    outline: none
+                    border: 2px solid $orange-color
+                    transition: 0.25s
+                    -ms-transition: 0.25s
+                    -moz-transition: 0.25s
+                    -webkit-transition: 0.25s
 
             &.checkbox
                 height: 20px
