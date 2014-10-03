@@ -46,6 +46,7 @@ $(window).scroll(function() {
         }
         if ($(this).scrollTop() > 1700) {
                 $(".mockup-phone").stop().addClass('visible');
+                $(".mockup-phone-legend").stop().addClass('visible');
         }
         if ($(this).scrollTop() > 3000) {
                 $(".conversation-timeline-content").stop().addClass('visible');

@@ -49,7 +49,7 @@
             type: "POST",
             url: url,
             data: dataString,
-            succes: function() {
+            success: function() {
                 $('.flash').html('').addClass('success').append(
                     $('<p></p>').html('Thanks for your early access request.'),
                     $('<p></p>').append(
@@ -58,12 +58,13 @@
                 ).fadeIn(100);
                 setTimeout(
                     function() {
-                        $('.flash').fadeOut();
+                        $('.flash').fadeOut().removeClass('success');;
                 }, 1500);
             },
             error: function(request) {
 
-                var message = request.responseText;
+                var response = JSON.parse(request.responseText);
+                var message = response.error.message;
 
                 $('.flash').html('').addClass('error').append(
                     $('<p></p>').html('Oops something went wrong:' + '&nbsp;' + message + '.'),
@@ -75,7 +76,7 @@
                 ).fadeIn(100);
 
                 $('.flash').bind('click', function(){
-                    $(this).fadeOut();
+                    $(this).fadeOut().removeClass('error');
                 });
             }
 
