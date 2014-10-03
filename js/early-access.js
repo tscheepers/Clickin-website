@@ -63,7 +63,8 @@
             },
             error: function(request) {
 
-                var message = request.responseText.message;
+                var response = JSON.parse(request.responseText);
+                var message = response.error.message;
 
                 $('.flash').html('').addClass('error').append(
                     $('<p></p>').html('Oops something went wrong:' + '&nbsp;' + message + '.'),
