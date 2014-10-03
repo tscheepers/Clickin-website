@@ -277,13 +277,51 @@ header
             z-index: 999
             display: none
             padding: 40px
-            font-size: 16px
             font-weight: 600
-            line-height: 25px
+
+            p
+                font-size: 20px
+                line-height: 30px
 
             &.error
                 background-color: rgba(248,248,248,0.75)
 
+            &.success
+                background-color: rgba(248,248,248,0.75)
+
+        input
+            border: 2px solid $gray-color
+            height: 40px
+            border-radius: 20px
+            -ms-border-radius: 20px
+            -moz-border-radius: 20px
+            -webkit-border-radius: 20px
+            width: 300px
+            background-color: white
+            padding: 10px 20px
+            font-size: 16px
+            line-height: 20px
+
+            &.submit
+                border: 2px solid $orange-color
+                font-family: $bree-serif
+                color: $orange-color
+                font-size: 18px
+                width: auto !important
+                padding: 10px 20px
+                line-height: 20px
+                margin-top: 20px
+
+                &:hover
+                    background-color: $orange-color
+                    color: white
+                &:focus
+                    outline: none
+                    border: 2px solid $orange-color
+                    transition: 0.25s
+                    -ms-transition: 0.25s
+                    -moz-transition: 0.25s
+                    -webkit-transition: 0.25s
 
         .input
             margin: 0 auto 20px auto
@@ -308,40 +346,6 @@ header
                 &.small
                     font-size: 12px
                     margin-top: 5px
-
-            input
-                border: 2px solid $gray-color
-                height: 40px
-                border-radius: 20px
-                -ms-border-radius: 20px
-                -moz-border-radius: 20px
-                -webkit-border-radius: 20px
-                width: 300px
-                background-color: white
-                padding: 10px 20px
-                font-size: 16px
-                line-height: 20px
-
-                &.submit
-                    border: 2px solid $orange-color
-                    font-family: $bree-serif
-                    color: $orange-color
-                    font-size: 18px
-                    width: auto !important
-                    padding: 10px 20px
-                    line-height: 20px
-                    margin-top: 20px
-
-                    &:hover
-                        background-color: $orange-color
-                        color: white
-                &:focus
-                    outline: none
-                    border: 2px solid $orange-color
-                    transition: 0.25s
-                    -ms-transition: 0.25s
-                    -moz-transition: 0.25s
-                    -webkit-transition: 0.25s
 
             &.checkbox
                 height: 20px

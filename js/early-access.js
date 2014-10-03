@@ -46,15 +46,30 @@
             type: "POST",
             url: url,
             data: dataString,
-            success: function() {
-                $('.flash').html('').addClass('success').html('Thanks for your early access request. Lets Clickin.').fadeIn(100);
+            succes: function() {
+                $('.flash').html('').addClass('success').append(
+                    $('<p></p>').html('Thanks for your early access request.'),
+                    $('<p></p>').append(
+                        $('<span></span>').html(' Lets Clickin!')
+                    )
+                ).fadeIn(100);
                 setTimeout(
                     function() {
-                        $(this).fadeOut();
+                        $('.flash').fadeOut();
                 }, 1500);
             },
-            error: function(){
-                $('.flash').html('').addClass('error').html('Oops something went wrong. Please contact us for early access.').fadeIn(100);
+            error: function(xhr) {
+
+                var responseText = $.httpData(xhr, 'json');
+                console.log(responseText);
+
+                alert(responseText);
+
+                $('.flash').html('').addClass('error').append(
+                    $('<p></p>').html('Oops something went wrong. Please try again or contact us for early access.'),
+                    $('<input></input>').addClass('submit').attr('type', 'button').attr('value', 'Try again')
+                ).fadeIn(100);
+
                 $('.flash').bind('click', function(){
                     $(this).fadeOut();
                 });
