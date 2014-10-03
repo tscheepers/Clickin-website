@@ -23,15 +23,19 @@ $(window).scroll(function() {
         }
 
         if ($(this).scrollTop() > 375) {
-                $(".app-store.header").stop().fadeOut(100);
+                //$(".app-store.header").stop().fadeOut(100);
+                $(".early-access.header").stop().fadeOut(100);
         } else {
-            $(".app-store.header").stop().fadeIn(100);
+            //$(".app-store.header").stop().fadeIn(100);
+            $(".early-access.header").stop().fadeIn(100);
         }
 
         if ($(this).scrollTop() < 375) {
-                $(".app-store.nav.small").stop().fadeOut(100);
+                //$(".app-store.nav.small").stop().fadeOut(100);
+                $(".early-access.nav").stop().fadeOut(100);
         } else {
-            $(".app-store.nav.small").stop().fadeIn(100);
+            //$(".app-store.nav.small").stop().fadeIn(100);
+            $(".early-access.nav").stop().fadeIn(100);
         }
 
         if ($(this).scrollTop() < 400) {

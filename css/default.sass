@@ -132,9 +132,9 @@ btn:hover,
 
     &.header
         display: block
-        width: 200px
-        height: 60px
-        right: calc(50% - 370px)
+        width: 270px
+        height: 80px
+        right: calc(50% - 440px)
         bottom: 60px
 
     &.nav
@@ -144,6 +144,63 @@ btn:hover,
 
         &.big
             display: none
+.early-access
+    position: absolute
+    height: 40px
+    width: auto
+    padding: 10px 20px
+    display: inline-block
+    border-radius: 20px
+    -ms-border-radius: 20px
+    -moz-border-radius: 20px
+    -webkit-border-radius: 20px
+    font-size: 18px
+    line-height: 20px
+    font-family: $bree-serif
+    cursor: pointer
+    
+    &.nav
+        right: 20px
+        bottom: 20px
+        display: none
+        color: $orange-color
+        border: 2px solid $orange-color
+        background-color: white
+
+        &:hover
+            background-color: $orange-color
+            color: white
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+    &.header
+        height: 60px
+        line-height: 40px
+        font-size: 30px
+        padding: 10px 30px
+        border-radius: 30px
+        -ms-border-radius: 30px
+        -moz-border-radius: 30px
+        -webkit-border-radius: 30px
+        background-color: transparent
+        color: white
+        border: 2px solid white
+        right: calc(50% - 440px)
+        bottom: 90px
+
+        &:hover
+            border: 2px solid $orange-color
+            background-color: $orange-color
+            color: white
+            transition: 0.25s
+            -ms-transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+
+
+
 
 
 // ------ Site elements classes ------
@@ -320,6 +377,94 @@ nav
             a
                 color: $gray-light-color
                 text-decoration: none
+// ------ Footer ------
+
+footer
+
+    padding-bottom: 80px !important
+
+    .footer-content-container
+
+        ul.footer-menu
+            list-style-type: none
+            padding: 0
+            margin: 0 auto
+
+            li
+                display: block
+
+        .footer-links
+            display: block
+            margin: 40px auto 0 auto
+
+            span
+                display: inline-block
+                margin: 0 20px 0 0
+
+                a
+                    color: $black-color
+                    text-decoration: underline
+
+                    &:hover
+                        color: $orange-color !important
+
+        .social-logos
+            margin: 40px 0 80px 0
+
+            .social-logo
+                width: 60px
+                height: 60px
+                display: block
+                background-size: 100%
+                background-position: center
+                background-repeat: no-repeat
+                display: inline-block
+                margin: 0 10px
+                opacity: 0.8
+                filter: alpha(opacity=80)
+
+                &:hover
+                    opacity: 1
+                    filter: alpha(opacity=100)
+                    transition: 0.25s
+                    -ms-transition: 0.25s
+                    -moz-transition: 0.25s
+                    -webkit-transition: 0.25s
+
+
+                &.fb
+                    background-image: $fb-logo
+
+                &.twitter
+                    background-image: $twitter-logo
+
+        .footer-logo
+            display: block
+            position: relative
+            background-image: $logo-image
+            background-size: 100%
+            background-position: center
+            background-repeat: no-repeat
+            height: 60px
+            width: 60px
+            float: left
+
+        .store-logo
+            display: inline-block
+            margin: 0 10px
+            position: relative
+            background-size: 100%
+            background-position: center
+            background-repeat: no-repeat
+            width: 230px
+            height: 80px
+
+            &.app-store
+                background-image: $app-store
+            
+            &.google-play
+                background-image: $google-play
+
 
 // ------ Responsive ------
 
@@ -329,6 +474,9 @@ nav
 
         span
             font-size: 58px !important
+
+@media (min-width:1080px) and (max-width:1250px)
+
 
 @media (max-width:1080px)
     
@@ -386,6 +534,11 @@ nav
                 bottom: 50px
                 width: 200px
                 height: 60px
+
+    .early-access
+        
+        &.header
+            display: none !important
 
     header
 

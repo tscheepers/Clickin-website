@@ -59,26 +59,49 @@
 			<nav class="wrapper header-large">
 				<div class="logo"></div>
 
-				<div class="app-store nav small"></div>
-				<div class="app-store nav big"></div>
+				<!-- <a href="" class="app-store nav small"></a>
+				<a href="" class="app-store nav big"></a> -->
+				<div data-scroll-goto="3" class="early-access nav">Get early access</div>
 
 				{% assign current = page.url | downcase | split: '/' %}
 				<ul>
 					<li id="say-hello" data-scroll-goto="0" class="menu-item">Say hello</li>
-					<li id="about" data-scroll-goto="1" class="menu-item">About</li>
-					<li id="access" data-scroll-goto="3" class="menu-item">Early access</li>
-					<!-- <li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li> -->
+					<!-- <li id="about" data-scroll-goto="1" class="menu-item">About</li> -->
+					<!-- <li id="access" data-scroll-goto="3" class="menu-item">Early access</li> -->
+					<li class="menu-item {% if current[1] == '' %}current{% endif %}"><a href="/">Press</a></li>
 				</ul>
 			</nav>
 			
 			{{ content }}
 
 		<!--FOOTER -->
-		<footer class="wrapper wrapper-gray align-center">
-			<div class="footer-content-wrapper">
-				<div class="email"><p><span>Sales:</span> sales@clickin.com</p></div>
-				<div class="footer-logo"></div>
-				<div class="email"><p><span>Press:</span> press@clickin.com</p></div>
+		<footer class="wrapper wrapper-gray">
+			<div class="container footer-content-container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>Follow <span>Clickin</span></h2>
+						<p class="leading align-center">
+							On Facebook and Twitter.
+						</p>
+					</div>
+
+					<div class="col-xs-12 align-center">
+						<!-- <div class="footer-logo"></div> -->
+						<div class="social-logos">
+							<a href="" class="social-logo fb"></a>
+							<a href="" class="social-logo twitter"></a>
+						</div>
+						<div class="store-logo app-store"></div>
+						<div class="store-logo google-play"></div>
+					</div>
+					<div class="col-xs-12 align-center">
+						<div class="footer-links">
+							<span>Say hello at <a href="mailto:hello@lclickin.com">hello@clickin.com</a></span>
+							<span>Our <a href="">privacy policy</a> and <a href="">terms of service</a></span>
+							<span>Developed with love by <a href="http://www.label305.com">Label305</a></span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 
