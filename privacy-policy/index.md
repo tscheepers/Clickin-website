@@ -24,6 +24,7 @@ Use of technologies to collect information. We use various technologies to colle
 
 #### How we use the information we collect
 In General. We may use information that we collect about you to:
+
 * deliver and improve our products and services, and manage our business;
 * manage your account and provide you with customer support;
 * perform research and analysis about your use of, or interest in, our or others’ products, services, or content;
