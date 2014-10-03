@@ -47,7 +47,11 @@
             url: url,
             data: dataString,
             success: function() {
-                alert('success');
+                $('.flash').html('').addClass('success').html('Thanks for your early access request. Lets Clickin.').fadeIn(100);
+                setTimeout(
+                    function() {
+                        $(this).fadeOut();
+                }, 1500);
             },
             error: function(){
                 $('.flash').html('').addClass('error').html('Oops something went wrong. Please contact us for early access.').fadeIn(100);
