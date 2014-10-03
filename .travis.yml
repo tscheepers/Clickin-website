@@ -5,7 +5,7 @@ script: jekyll build
 after_success:
 - ls -la
 deploy:
-  provider: s3
+- provider: s3
   access_key_id: AKIAIY6LCZTMFGA3LQJA
   secret_access_key:
     secure: YZlglD2kRwh/7G27tWmuV3/ExEDw53am57qJ74TmIXvLftmMaFpy9GZcD1BXCb3YB9b1Wi7oLTMNkC2RiFkNhOWYwNTwIQlz4eeeFphkt1DkqOX0HbxLQsUh9g3JZIMxsNcZbm4kna4PvSONqFlkU7EMwJ9iZmg6Jy7ftixLaUc=
@@ -18,3 +18,16 @@ deploy:
   on:
     repo: Label305/Clickin.co
     branch: dev
+- provider: s3
+  access_key_id: AKIAIY6LCZTMFGA3LQJA
+  secret_access_key:
+    secure: YZlglD2kRwh/7G27tWmuV3/ExEDw53am57qJ74TmIXvLftmMaFpy9GZcD1BXCb3YB9b1Wi7oLTMNkC2RiFkNhOWYwNTwIQlz4eeeFphkt1DkqOX0HbxLQsUh9g3JZIMxsNcZbm4kna4PvSONqFlkU7EMwJ9iZmg6Jy7ftixLaUc=
+  endpoint: s3-website-eu-west-1.amazonaws.com
+  bucket: www.clickin.co
+  region: eu-west-1
+  skip_cleanup: true
+  local-dir: _site
+  acl: !ruby/string:HighLine::String public_read
+  on:
+    repo: Label305/Clickin.co
+    branch: master
