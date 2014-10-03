@@ -68,6 +68,28 @@ $(window).scroll(function() {
 });
 $(document).ready(function(){
 
+    //Check url and use correct menu
+    $(function(){
+        // Check url
+        
+        pathArray = window.location.href.split( '/' );
+
+        page = pathArray[3];
+
+        if(page == '' || page.charAt(0) == '#'){
+            $('ul#home-menu').show();
+            $('ul#page-menu').hide();
+        } else{
+            $('ul#home-menu').hide();
+            $('ul#page-menu').removeClass('hidden').show();
+        }   
+    });
+    
+   
+
+
+
+
     /**
      * Scrollit light scroll animation
      *
@@ -77,7 +99,7 @@ $(document).ready(function(){
     $(function(){
         $.scrollIt(
         {
-            topOffset: 0
+            topOffset: -60
         });
     });
 
@@ -90,15 +112,11 @@ $(document).ready(function(){
     // Make menu items active on icon click in document
     $('.icon-down.say-hello').bind('click', function(){
         $(document).find('.current').removeClass('current');
-        $('#say-hello').addClass('current');
+        $('#clickin-app-menu-item').addClass('current');
     });
-    $('.icon-down.about').bind('click', function(){
+    $('.icon-down.contact').bind('click', function(){
         $(document).find('.current').removeClass('current');
-        $('#about').addClass('current');
-    });
-    $('.icon-down.access').bind('click', function(){
-        $(document).find('.current').removeClass('current');
-        $('#access').addClass('current');
+        $('#contact-menu-item').addClass('current');
     });
 
 
