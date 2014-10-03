@@ -315,13 +315,13 @@ header
                 &:hover
                     background-color: $orange-color
                     color: white
-                &:focus
-                    outline: none
-                    border: 2px solid $orange-color
-                    transition: 0.25s
-                    -ms-transition: 0.25s
-                    -moz-transition: 0.25s
-                    -webkit-transition: 0.25s
+            &:focus
+                outline: none
+                border: 2px solid $orange-color
+                transition: 0.25s
+                -ms-transition: 0.25s
+                -moz-transition: 0.25s
+                -webkit-transition: 0.25s
 
         .input
             margin: 0 auto 20px auto
@@ -329,6 +329,12 @@ header
             min-height: 40px
             position: relative
             display: block
+
+            &.disabled
+                opacity: 0.5
+                filter: alpha(opacity=50)
+                pointer-events: none
+                cursor: default
 
             label
                 display: none

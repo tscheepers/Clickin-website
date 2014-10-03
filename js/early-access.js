@@ -39,6 +39,9 @@
 
         var dataString = $('form').serialize();
 
+        $('form input').attr('disabled', 'disabled');
+        $('form .input').addClass('disabled');
+
             url = '';
             url = $('form').attr('action');
 
@@ -58,16 +61,17 @@
                         $('.flash').fadeOut();
                 }, 1500);
             },
-            error: function(xhr) {
+            error: function(request) {
 
-                var responseText = $.httpData(xhr, 'json');
-                console.log(responseText);
-
-                alert(responseText);
+                var message = request.responseText;
 
                 $('.flash').html('').addClass('error').append(
-                    $('<p></p>').html('Oops something went wrong. Please try again or contact us for early access.'),
-                    $('<input></input>').addClass('submit').attr('type', 'button').attr('value', 'Try again')
+                    $('<p></p>').html('Oops something went wrong:' + '&nbsp;' + message + '.'),
+                    $('<p></p>').html('Please try again or contact us for early access.'),
+                    $('<input></input>').addClass('submit').attr('type', 'button').attr('value', 'Try again').bind('click', function(){
+                        $('form input').removeAttr('disabled', 'disabled');
+                        $('form .input').removeClass('disabled');
+                    })
                 ).fadeIn(100);
 
                 $('.flash').bind('click', function(){
