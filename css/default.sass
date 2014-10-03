@@ -120,6 +120,32 @@ btn:hover,
 .relative
     position: relative
 
+.app-store
+    width: 135px
+    height: 40px
+    display: block
+    background-image: $appstore
+    background-size: 100%
+    background-repeat: no-repeat
+    background-position: center
+    position: absolute
+
+    &.header
+        display: block
+        width: 200px
+        height: 60px
+        right: calc(50% - 370px)
+        bottom: 60px
+
+    &.nav
+        display: none
+        right: 60px
+        bottom: 20px
+
+        &.big
+            display: none
+
+
 // ------ Site elements classes ------
 
 .icon-down
@@ -304,7 +330,7 @@ nav
         span
             font-size: 58px !important
 
-@media (max-width:991px)
+@media (max-width:1080px)
     
     nav
 
@@ -336,6 +362,25 @@ nav
                 -ms-transition: 0.25s
                 -moz-transition: 0.25s
                 -webkit-transition: 0.25s
+
+        &.header-small
+
+            .app-store.nav.big
+                bottom: 20px
+                width: 135px
+                height: 40px
+    
+    .app-store
+
+        &.header
+            display: none !important
+
+        &.nav.big
+            display: block !important
+            right: 60px
+            bottom: 50px
+            width: 200px
+            height: 60px
 
     header
 
