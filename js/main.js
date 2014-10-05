@@ -115,6 +115,4 @@ $(document).ready(function(){
         $('#contact-menu-item').addClass('current');
     });
 
-
-    $('select').fancySelect();
 });
