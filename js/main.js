@@ -67,6 +67,7 @@ $(document).ready(function(){
         $("nav").addClass('header-large');
         $(".content-phone-container").addClass('visible');
         $(".mockup-phone").addClass('visible');
+        $(".mockup-phone-legend").addClass('visible');
         $(".conversation-timeline-content").addClass('visible');
         $("form").addClass('visible');
         $(".early-access.nav").addClass('mobile');
