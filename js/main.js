@@ -57,15 +57,22 @@ $(window).scroll(function() {
 
     }
     else {
+        
+    }
+
+});
+$(document).ready(function(){
+
+     if (mobilecheck()) {
         $("nav").addClass('header-large');
         $(".content-phone-container").addClass('visible');
         $(".mockup-phone").addClass('visible');
         $(".conversation-timeline-content").addClass('visible');
         $("form").addClass('visible');
+        $(".early-access.nav").addClass('mobile');
+        $('nav').addClass('mobile');
+        $('.container').addClass('mobile');
     }
-
-});
-$(document).ready(function(){
 
     //Check url and use correct menu
     $(function(){
