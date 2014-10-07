@@ -57,13 +57,11 @@ $(window).scroll(function() {
 
     }
     else {
-
-        $("nav").addClass('header-small');
+        $("nav").addClass('header-large');
         $(".content-phone-container").addClass('visible');
         $(".mockup-phone").addClass('visible');
         $(".conversation-timeline-content").addClass('visible');
         $("form").addClass('visible');
-
     }
 
 });
@@ -115,6 +113,4 @@ $(document).ready(function(){
         $('#contact-menu-item').addClass('current');
     });
 
-
-    $('select').fancySelect();
 });
