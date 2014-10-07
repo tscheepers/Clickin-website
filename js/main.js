@@ -57,17 +57,23 @@ $(window).scroll(function() {
 
     }
     else {
-
-        $("nav").addClass('header-small');
-        $(".content-phone-container").addClass('visible');
-        $(".mockup-phone").addClass('visible');
-        $(".conversation-timeline-content").addClass('visible');
-        $("form").addClass('visible');
-
+        
     }
 
 });
 $(document).ready(function(){
+
+     if (mobilecheck()) {
+        $("nav").addClass('header-large');
+        $(".content-phone-container").addClass('visible');
+        $(".mockup-phone").addClass('visible');
+        $(".mockup-phone-legend").addClass('visible');
+        $(".conversation-timeline-content").addClass('visible');
+        $("form").addClass('visible');
+        $(".early-access.nav").addClass('mobile');
+        $('nav').addClass('mobile');
+        $('.container').addClass('mobile');
+    }
 
     //Check url and use correct menu
     $(function(){

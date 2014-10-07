@@ -228,6 +228,12 @@ btn:hover,
             -ms-transition: 0.25s
             -moz-transition: 0.25s
             -webkit-transition: 0.25s
+        
+        &.mobile
+            display: block
+            bottom: 60px
+            right: 60px
+            font-size: 25px
 
     &.header
         height: 60px
@@ -320,6 +326,18 @@ nav
     background-color: $bg-color
     z-index: 1000
     height: 160px
+
+    &.mobile
+        box-shadow: 0 0 8px #dddddd
+        -ms-box-shadow: 0 0 8px #dddddd
+        -moz-box-shadow: 0 0 8px #dddddd
+        -webkit-box-shadow: 0 0 8px #dddddd
+
+        ul
+
+            li
+                font-size: 32px !important
+
 
     .logo
         display: inline-block
@@ -517,6 +535,53 @@ footer
 
 
 // ------ Responsive ------
+
+.container.mobile
+    
+    h2
+        font-size: 60px
+
+    h3.nav-phrase
+        font-size: 35px
+        height: 35px
+        line-height: 35px
+        margin-bottom: 20px !important
+
+        &:after
+            height: 212px
+            top: 120px
+
+    .icon-down
+        width: 60px
+        height: 60px
+
+    p
+        font-size: 18px
+
+        &.leading
+            font-size: 30px
+            line-height: 40px
+
+    .col-sm-10
+        width: 100% !important
+        margin-left: auto !important
+        margin-right: auto !important
+
+    .mockup-phone-legend
+
+        span
+            font-size: 22px
+
+    form
+
+        .checkbox
+
+            span
+                font-size: 18px
+        .submit
+
+            input
+                font-size: 25px !important
 
 @media (min-width:991px) and (max-width:1100px)
 
