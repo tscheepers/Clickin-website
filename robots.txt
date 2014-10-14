@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /privacy-policy/
 Disallow: /safety/
 Disallow: /terms-of-service/
+Disallow: /app-terms/
