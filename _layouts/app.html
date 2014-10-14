@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <!--
+     _            _          _ ____   ___  _____ 
+    | |          | |        | |___ \ / _ \| ____|
+    | |      __ _| |__   ___| | __) | |_| | |__  
+    | |     / _` | '_ \ / _ \ ||__ <|     |___ \ 
+    | |____| (_| | |_) |  __/ |___) |     |___) |
+    |______|\__,_|_.__/ \___|_|____/ \___/|____/ 
+
+    -->
+    <head>
+        <title>{{ site.name }} - An app to go do something fun, right now!</title>
+        <meta name="description" content="The app that effortlessly connects you to people who want to meetup and do something fun. They could be your best friends, acquaintances or people you meet through Clickin. You decide who!" />
+        <meta name="keywords" content="clickin, click in, ios, app, social discovery, facebook" />
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+
+        <!-- All favicons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/icons/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/icons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#1ebab8">
+        <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="/js/lib/html5shiv.js"></script> 
+        <link rel="stylesheet" type="text/css" href="/css/ie.not.passed.css" /> 
+        <![endif]-->
+
+        <!--Webfonts-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,600,400' rel='stylesheet' type='text/css'>
+
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="/css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="/css/ui.css" />
+         <link rel="stylesheet" type="text/css" href="/css/empty.css" />
+    {% for css_name in page.css %}
+        <link rel="stylesheet" type="text/css" href="/css/{{ css_name }}?v=1">
+    {% endfor %}
+    </head>
+    <body>
+        <section class="wrapper wrapper-white app-page">
+            <div class="container app-container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                       {{ content }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

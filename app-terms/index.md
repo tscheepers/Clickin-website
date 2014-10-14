@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy & Terms of Service
-layout: empty
+layout: app
 ---
 
 ##Privacy Policy
