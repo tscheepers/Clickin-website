@@ -1,5 +1,5 @@
 ---
-title: Privacy policy
+title: Privacy Policy & Terms of Service
 layout: empty
 ---
 
