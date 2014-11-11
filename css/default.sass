@@ -174,30 +174,6 @@ btn:hover,
 .relative
     position: relative
 
-.app-store
-    width: 135px
-    height: 40px
-    display: block
-    background-image: $appstore
-    background-size: 100%
-    background-repeat: no-repeat
-    background-position: center
-    position: absolute
-
-    &.header
-        display: block
-        width: 270px
-        height: 80px
-        right: calc(50% - 440px)
-        bottom: 60px
-
-    &.nav
-        display: none
-        right: 20px
-        bottom: 20px
-
-        &.big
-            display: none
 .early-access
     position: absolute
     height: 40px
@@ -517,21 +493,36 @@ footer
             width: 60px
             float: left
 
-        .store-logo
-            display: inline-block
-            margin: 0 10px
-            position: relative
-            background-size: 100%
-            background-position: center
-            background-repeat: no-repeat
-            width: 230px
-            height: 80px
+.store-logo
+    display: inline-block
+    margin: 0 10px
+    position: relative
+    background-size: 100%
+    background-position: center
+    background-repeat: no-repeat
+    width: 230px
+    height: 80px
 
-            &.app-store
-                background-image: $app-store
-            
-            &.google-play
-                background-image: $google-play
+    &.app-store
+        background-image: $app-store
+        &:hover
+            opacity: 0.75
+            filter: alpha(opacity=75)
+            transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+    
+    &.app-store-white
+        background-image: $app-store-white
+        &:hover
+            opacity: 0.75
+            filter: alpha(opacity=0.75)
+            transition: 0.25s
+            -moz-transition: 0.25s
+            -webkit-transition: 0.25s
+    
+    &.google-play
+        background-image: $google-play
 
 
 // ------ Responsive ------
