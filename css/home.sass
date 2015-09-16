@@ -407,3 +407,87 @@ header
                     -moz-transition: 0.25s
                     -webkit-transition: 0.25s
 
+
+// ------ Blog classes ------
+body
+    &.blog
+        background-color: $gray-lightest-color
+    footer
+        position: absolute
+        bottom: 0
+ol.tumblr_posts
+    position: relative
+    display: block
+    width: 100%
+    max-width: 970px
+    min-width: 270px
+    padding: 1px
+    z-index: 2
+    background-color: transparent
+    margin: 250px auto 100px
+    &:before
+        content: ""
+        background-color: #ffffff
+        display: block
+        height: calc(100% + 98px)
+        left: -71px
+        position: absolute
+        top: 2px
+        width: 3px
+        z-index: 0
+    .tumblr_post
+        display: block
+        position: relative
+        padding: 20px
+        margin: 0 auto 40px 0
+        background-color: #ffffff
+        border: 1px solid $gray-line-color
+        border-radius: 4px
+        .tumblr_title
+            color: $orange-color
+            font-family: "Bree Serif"
+            font-weight: 500
+            font-size: 36px
+            line-height: 1.16
+        &:before
+            content: ""
+            background-color: #ffffff
+            bottom: 0
+            display: block
+            height: calc(100% + 30px)
+            left: -73px
+            position: absolute
+            top: 0
+            width: 3px
+            z-index: 0
+        &:after
+            content: ""
+            background: #ffffff url("http://33.media.tumblr.com/avatar_ce30c2368a3d_128.png") center center no-repeat
+            background-size: 70px auto
+            border: medium none
+            border-radius: 50px
+            box-shadow: none
+            height: 100px
+            left: -122px
+            position: absolute
+            width: 100px
+            z-index: 10
+            top: 0
+    .tumblr_body img
+        display: block
+    .read_more_container
+        display: block
+    .read_more_container a
+        display: block
+
+
+
+
+    .tumblr_quote
+
+
+    .tumblr_quote p
+
+
+    .tumblr_source
+
