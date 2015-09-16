@@ -435,6 +435,13 @@ ol.tumblr_posts
         top: 2px
         width: 3px
         z-index: 0
+    h2
+        color: $orange-color
+        font-family: "Bree Serif"
+        font-weight: 500
+        font-size: 22px
+        line-height: 1.16
+        text-align: left
     .tumblr_post
         display: block
         position: relative
@@ -480,14 +487,43 @@ ol.tumblr_posts
     .read_more_container a
         display: block
 
-
-
-
     .tumblr_quote
-
-
-    .tumblr_quote p
-
-
+        color: #e46b39
+        font-family: "Bree Serif"
+        font-size: 34px
+        line-height: 1.3
+        margin: 0
+        padding: 0 5px 0 0
     .tumblr_source
-
+        margin: 10px 0 0
+        padding-left: 25px
+        position: relative
+        &:before
+            content: "— "
+            left: 0
+            position: absolute
+            top: 0
+    .read_more_container
+        a
+            margin-top: 10px
+            border-radius: 20px
+            display: inline-block
+            font-family: "Bree Serif",sans-serif
+            text-decoration: none
+            font-size: 18px
+            height: 40px
+            line-height: 20px
+            padding: 10px 20px
+            width: auto
+            background-color: white
+            border: 2px solid $orange-color
+            bottom: 20px
+            color: $orange-color
+            right: 20px
+            &:hover
+                background-color: $orange-color
+                color: #ffffff !important
+                transition: 0.25s
+                -ms-transition: 0.25s
+                -moz-transition: 0.25s
+                -webkit-transition: 0.25s
