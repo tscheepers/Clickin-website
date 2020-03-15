@@ -3,6 +3,7 @@
 
 *.sublime-project
 *.sublime-workspace
+.jekyll-cache
 
 _site
 .sass-cache
